@@ -47,6 +47,22 @@ def load_policy(exp, seed):
     return build_agent(exp, seed=seed).load(path).greedy_policy()
 
 
+def metric_points(curve, metric):
+    """Return sorted unique (step, metric) points for plotting.
+
+    Older result files appended dense loss logs after eval logs, which made
+    x-values jump backwards and produced long diagonal lines in matplotlib.
+    """
+    points = {}
+    for m in curve:
+        step = m.get("step")
+        value = m.get(metric)
+        if step is None or value is None:
+            continue
+        points[step] = value
+    return sorted(points.items())
+
+
 def plot_curves(curves, seed):
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.5))
     for metric, ax, title in [("random_win", axes[0], "Win rate vs Random"),
@@ -56,7 +72,7 @@ def plot_curves(curves, seed):
             if not c:
                 continue
             # 只取有evaluation数据的条目（有metric的）
-            pts = [(m["step"], m[metric]) for m in c["curve"] if metric in m]
+            pts = metric_points(c["curve"], metric)
             if pts:
                 xs, ys = zip(*pts)
                 ax.plot(xs, ys, marker="o", ms=3, label=exp.upper(), color=COLORS[exp])
@@ -77,22 +93,34 @@ def plot_loss(curves, seed):
     """Training loss curves: policy (clipped surrogate) for both methods, and
     value loss for PPO (GRPO is critic-free, so it has none)."""
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.5))
+
+    # 收集所有数据点以自动适配坐标轴范围
+    all_x_vals = []
+
     for exp in EXPERIMENTS:
         c = curves.get(exp)
         if not c:
             continue
-        pts = [(m["step"], m.get("ploss")) for m in c["curve"]
-               if m.get("ploss") is not None]
+        pts = metric_points(c["curve"], "ploss")
         if pts:
             xs, ys = zip(*pts)
+            all_x_vals.extend(xs)
             axes[0].plot(xs, ys, marker="o", ms=3, label=exp.upper(),
                          color=COLORS[exp])
-        vpts = [(m["step"], m.get("vloss")) for m in c["curve"]
-                if m.get("vloss") is not None]
+        vpts = metric_points(c["curve"], "vloss")
         if vpts:
             xs, ys = zip(*vpts)
+            all_x_vals.extend(xs)
             axes[1].plot(xs, ys, marker="o", ms=3, label=exp.upper(),
                          color=COLORS[exp])
+
+    # 设置 x 轴范围，自动适配所有数据
+    if all_x_vals:
+        x_max = max(all_x_vals)
+        x_range = (x_max - 0) * 0.05  # 右边留出5%的空间
+        axes[0].set_xlim(0, x_max + x_range)
+        axes[1].set_xlim(0, x_max + x_range)
+
     axes[0].set_title("Policy loss (clipped surrogate)")
     axes[1].set_title("Value loss (PPO critic)")
     for ax in axes:
