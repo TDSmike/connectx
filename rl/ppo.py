@@ -227,11 +227,21 @@ class PPOAgent:
         self._total_steps = total_steps
         next_eval = eval_every
         next_snap = c.snapshot_every
+        next_loss_log = 10  # log loss every 10 steps
+        loss_curve: list = []
         t0 = time.time()
         while self.steps < total_steps:
             roll = self._collect()
             self._apply_lr()
             losses = self._update(roll)
+            if self.steps >= next_loss_log:
+                loss_curve.append({
+                    "step": self.steps,
+                    "ploss": round(losses["policy_loss"], 4),
+                    "vloss": round(losses["value_loss"], 4),
+                    "entropy": round(losses["entropy"], 3),
+                })
+                next_loss_log += 10
             if self.steps >= next_snap:
                 self.pool.add(self.snapshot())
                 next_snap += c.snapshot_every
@@ -256,6 +266,7 @@ class PPOAgent:
                       f"ent {metrics['entropy']:.2f} | mix r/n/s {mix[0]:.2f}/{mix[1]:.2f}/{mix[2]:.2f} "
                       f"lr {lr_now:.1e} | {sps:.0f} st/s", flush=True)
                 next_eval += eval_every
+        log.extend(loss_curve)
         return log
 
     # io ----------------------------------------------------------------

@@ -4,12 +4,8 @@ saved loss figure -> /data/mingxiang/course/results/loss_curves.png
 === Final win rates (internal engine, Kaggle-style depth-4 negamax) ===
 method |    vs random |      vs negamax(d4)  [P1 / P2]
 ------------------------------------------------------
-PPO    | win 0.975   | win 0.850   [0.90 / 0.80]
-GRPO   | win 0.965   | win 0.720   [0.75 / 0.69]
+PPO    | win 0.993   | win 0.922   [0.97 / 0.88]
+GRPO   | win 0.985   | win 0.835   [0.89 / 0.79]
 
 === Head-to-head: PPO vs GRPO ===
 PPO win 1.000 | draw 0.000 | GRPO win 0.000
-
-=== Faithful evaluation vs Kaggle built-ins ===
-PPO    | kaggle-random win 0.960 | kaggle-negamax win 0.870 reward +0.74
-GRPO   | kaggle-random win 0.970 | kaggle-negamax win 0.700 reward +0.43

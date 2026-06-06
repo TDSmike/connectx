@@ -55,9 +55,11 @@ def plot_curves(curves, seed):
             c = curves.get(exp)
             if not c:
                 continue
-            xs = [m["step"] for m in c["curve"]]
-            ys = [m[metric] for m in c["curve"]]
-            ax.plot(xs, ys, marker="o", ms=3, label=exp.upper(), color=COLORS[exp])
+            # 只取有evaluation数据的条目（有metric的）
+            pts = [(m["step"], m[metric]) for m in c["curve"] if metric in m]
+            if pts:
+                xs, ys = zip(*pts)
+                ax.plot(xs, ys, marker="o", ms=3, label=exp.upper(), color=COLORS[exp])
         ax.set_title(title)
         ax.set_xlabel("self-play steps")
         ax.set_ylabel("win rate")

@@ -1,28 +1,595 @@
 {
   "exp": "ppo",
   "seed": 0,
-  "steps": 300000,
-  "seconds": 1922.4183712005615,
+  "steps": 500000,
+  "seconds": 5604.243504285812,
   "curve": [
     {
-      "random_win": 0.93,
-      "random_score": 0.86,
+      "random_win": 0.89,
+      "random_score": 0.78,
       "random_p1": 0.92,
-      "random_p2": 0.94,
+      "random_p2": 0.86,
+      "negamax_win": 0.0,
+      "negamax_score": -1.0,
+      "negamax_p1": 0.0,
+      "negamax_p2": 0.0,
+      "step": 2048,
+      "pool": 0,
+      "ploss": 0.0221,
+      "vloss": 1.8958,
+      "entropy": 1.751,
+      "lr": 0.0002999888232014978,
+      "opp_mix": [
+        0.84,
+        0.08,
+        0.08
+      ]
+    },
+    {
+      "random_win": 0.83,
+      "random_score": 0.66,
+      "random_p1": 0.88,
+      "random_p2": 0.78,
+      "negamax_win": 0.01,
+      "negamax_score": -0.98,
+      "negamax_p1": 0.0,
+      "negamax_p2": 0.02,
+      "step": 4096,
+      "pool": 0,
+      "ploss": -0.0058,
+      "vloss": 0.9669,
+      "entropy": 1.686,
+      "lr": 0.0002999552946566701,
+      "opp_mix": [
+        0.83,
+        0.09,
+        0.08
+      ]
+    },
+    {
+      "random_win": 0.91,
+      "random_score": 0.82,
+      "random_p1": 1.0,
+      "random_p2": 0.82,
+      "negamax_win": 0.01,
+      "negamax_score": -0.98,
+      "negamax_p1": 0.0,
+      "negamax_p2": 0.02,
+      "step": 6144,
+      "pool": 0,
+      "ploss": -0.009,
+      "vloss": 0.989,
+      "entropy": 1.724,
+      "lr": 0.00029989941991724714,
+      "opp_mix": [
+        0.82,
+        0.09,
+        0.08
+      ]
+    },
+    {
+      "random_win": 0.89,
+      "random_score": 0.78,
+      "random_p1": 0.92,
+      "random_p2": 0.86,
+      "negamax_win": 0.01,
+      "negamax_score": -0.98,
+      "negamax_p1": 0.0,
+      "negamax_p2": 0.02,
+      "step": 8192,
+      "pool": 0,
+      "ploss": -0.0089,
+      "vloss": 0.9854,
+      "entropy": 1.736,
+      "lr": 0.00029982120823509115,
+      "opp_mix": [
+        0.81,
+        0.1,
+        0.09
+      ]
+    },
+    {
+      "random_win": 0.84,
+      "random_score": 0.68,
+      "random_p1": 0.82,
+      "random_p2": 0.86,
+      "negamax_win": 0.01,
+      "negamax_score": -0.98,
+      "negamax_p1": 0.0,
+      "negamax_p2": 0.02,
+      "step": 10240,
+      "pool": 0,
+      "ploss": -0.0083,
+      "vloss": 0.8666,
+      "entropy": 1.717,
+      "lr": 0.0002997206725606646,
+      "opp_mix": [
+        0.81,
+        0.11,
+        0.09
+      ]
+    },
+    {
+      "random_win": 0.88,
+      "random_score": 0.76,
+      "random_p1": 0.92,
+      "random_p2": 0.84,
+      "negamax_win": 0.01,
+      "negamax_score": -0.98,
+      "negamax_p1": 0.02,
+      "negamax_p2": 0.0,
+      "step": 12288,
+      "pool": 0,
+      "ploss": -0.0033,
+      "vloss": 1.0746,
+      "entropy": 1.697,
+      "lr": 0.00029959782954088566,
+      "opp_mix": [
+        0.8,
+        0.11,
+        0.09
+      ]
+    },
+    {
+      "random_win": 0.83,
+      "random_score": 0.66,
+      "random_p1": 0.9,
+      "random_p2": 0.76,
+      "negamax_win": 0.01,
+      "negamax_score": -0.98,
+      "negamax_p1": 0.02,
+      "negamax_p2": 0.0,
+      "step": 14336,
+      "pool": 0,
+      "ploss": -0.0122,
+      "vloss": 0.8804,
+      "entropy": 1.57,
+      "lr": 0.00029945269951637166,
+      "opp_mix": [
+        0.79,
+        0.12,
+        0.09
+      ]
+    },
+    {
+      "random_win": 0.88,
+      "random_score": 0.76,
+      "random_p1": 0.9,
+      "random_p2": 0.86,
+      "negamax_win": 0.01,
+      "negamax_score": -0.98,
+      "negamax_p1": 0.0,
+      "negamax_p2": 0.02,
+      "step": 16384,
+      "pool": 0,
+      "ploss": -0.0165,
+      "vloss": 0.8848,
+      "entropy": 1.448,
+      "lr": 0.0002992853065180715,
+      "opp_mix": [
+        0.78,
+        0.12,
+        0.1
+      ]
+    },
+    {
+      "random_win": 0.89,
+      "random_score": 0.78,
+      "random_p1": 0.92,
+      "random_p2": 0.86,
+      "negamax_win": 0.02,
+      "negamax_score": -0.96,
+      "negamax_p1": 0.04,
+      "negamax_p2": 0.0,
+      "step": 18432,
+      "pool": 0,
+      "ploss": -0.0189,
+      "vloss": 0.6929,
+      "entropy": 1.348,
+      "lr": 0.00029909567826328596,
+      "opp_mix": [
+        0.77,
+        0.13,
+        0.1
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.96,
+      "random_p2": 0.96,
       "negamax_win": 0.0,
       "negamax_score": -1.0,
       "negamax_p1": 0.0,
       "negamax_p2": 0.0,
       "step": 20480,
       "pool": 1,
-      "ploss": -0.0145,
-      "vloss": 0.6307,
-      "entropy": 1.296,
-      "lr": 0.0002969071729480692,
+      "ploss": -0.0157,
+      "vloss": 0.7318,
+      "entropy": 1.293,
+      "lr": 0.00029888384615107884,
+      "opp_mix": [
+        0.77,
+        0.13,
+        0.1
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.96,
+      "random_p2": 0.92,
+      "negamax_win": 0.03,
+      "negamax_score": -0.94,
+      "negamax_p1": 0.06,
+      "negamax_p2": 0.0,
+      "step": 22528,
+      "pool": 1,
+      "ploss": -0.0182,
+      "vloss": 0.7646,
+      "entropy": 1.28,
+      "lr": 0.0002986498452570772,
+      "opp_mix": [
+        0.76,
+        0.14,
+        0.1
+      ]
+    },
+    {
+      "random_win": 0.91,
+      "random_score": 0.82,
+      "random_p1": 0.92,
+      "random_p2": 0.9,
+      "negamax_win": 0.01,
+      "negamax_score": -0.98,
+      "negamax_p1": 0.02,
+      "negamax_p2": 0.0,
+      "step": 24576,
+      "pool": 1,
+      "ploss": -0.0205,
+      "vloss": 0.6932,
+      "entropy": 1.26,
+      "lr": 0.00029839371432766385,
+      "opp_mix": [
+        0.75,
+        0.14,
+        0.11
+      ]
+    },
+    {
+      "random_win": 0.93,
+      "random_score": 0.86,
+      "random_p1": 0.92,
+      "random_p2": 0.94,
+      "negamax_win": 0.07,
+      "negamax_score": -0.86,
+      "negamax_p1": 0.12,
+      "negamax_p2": 0.02,
+      "step": 26624,
+      "pool": 1,
+      "ploss": -0.0174,
+      "vloss": 0.7169,
+      "entropy": 1.226,
+      "lr": 0.0002981154957735617,
+      "opp_mix": [
+        0.74,
+        0.15,
+        0.11
+      ]
+    },
+    {
+      "random_win": 0.88,
+      "random_score": 0.76,
+      "random_p1": 0.9,
+      "random_p2": 0.86,
+      "negamax_win": 0.03,
+      "negamax_score": -0.94,
+      "negamax_p1": 0.06,
+      "negamax_p2": 0.0,
+      "step": 28672,
+      "pool": 1,
+      "ploss": -0.0167,
+      "vloss": 0.7402,
+      "entropy": 1.139,
+      "lr": 0.0002978152356628109,
+      "opp_mix": [
+        0.74,
+        0.15,
+        0.11
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.0,
+      "negamax_score": -1.0,
+      "negamax_p1": 0.0,
+      "negamax_p2": 0.0,
+      "step": 30720,
+      "pool": 1,
+      "ploss": -0.0127,
+      "vloss": 0.6125,
+      "entropy": 1.034,
+      "lr": 0.0002974929837131412,
+      "opp_mix": [
+        0.73,
+        0.16,
+        0.11
+      ]
+    },
+    {
+      "random_win": 0.88,
+      "random_score": 0.76,
+      "random_p1": 0.9,
+      "random_p2": 0.86,
+      "negamax_win": 0.0,
+      "negamax_score": -0.99,
+      "negamax_p1": 0.0,
+      "negamax_p2": 0.0,
+      "step": 32768,
+      "pool": 1,
+      "ploss": -0.0189,
+      "vloss": 0.6505,
+      "entropy": 0.997,
+      "lr": 0.0002971487932837395,
       "opp_mix": [
         0.72,
         0.16,
         0.12
+      ]
+    },
+    {
+      "random_win": 0.9,
+      "random_score": 0.8,
+      "random_p1": 0.94,
+      "random_p2": 0.86,
+      "negamax_win": 0.04,
+      "negamax_score": -0.92,
+      "negamax_p1": 0.04,
+      "negamax_p2": 0.04,
+      "step": 34816,
+      "pool": 1,
+      "ploss": -0.0134,
+      "vloss": 0.666,
+      "entropy": 0.944,
+      "lr": 0.0002967827213664142,
+      "opp_mix": [
+        0.72,
+        0.17,
+        0.12
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.92,
+      "random_p2": 0.96,
+      "negamax_win": 0.02,
+      "negamax_score": -0.96,
+      "negamax_p1": 0.04,
+      "negamax_p2": 0.0,
+      "step": 36864,
+      "pool": 1,
+      "ploss": -0.0183,
+      "vloss": 0.541,
+      "entropy": 0.882,
+      "lr": 0.00029639482857615876,
+      "opp_mix": [
+        0.71,
+        0.17,
+        0.12
+      ]
+    },
+    {
+      "random_win": 0.89,
+      "random_score": 0.78,
+      "random_p1": 0.86,
+      "random_p2": 0.92,
+      "negamax_win": 0.0,
+      "negamax_score": -1.0,
+      "negamax_p1": 0.0,
+      "negamax_p2": 0.0,
+      "step": 38912,
+      "pool": 1,
+      "ploss": -0.0128,
+      "vloss": 0.5853,
+      "entropy": 0.842,
+      "lr": 0.00029598517914111483,
+      "opp_mix": [
+        0.7,
+        0.18,
+        0.12
+      ]
+    },
+    {
+      "random_win": 0.93,
+      "random_score": 0.86,
+      "random_p1": 0.96,
+      "random_p2": 0.9,
+      "negamax_win": 0.02,
+      "negamax_score": -0.96,
+      "negamax_p1": 0.04,
+      "negamax_p2": 0.0,
+      "step": 40960,
+      "pool": 2,
+      "ploss": -0.0145,
+      "vloss": 0.5964,
+      "entropy": 0.85,
+      "lr": 0.0002955538408919371,
+      "opp_mix": [
+        0.7,
+        0.18,
+        0.12
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.02,
+      "negamax_score": -0.96,
+      "negamax_p1": 0.04,
+      "negamax_p2": 0.0,
+      "step": 43008,
+      "pool": 2,
+      "ploss": -0.0197,
+      "vloss": 0.5779,
+      "entropy": 0.791,
+      "lr": 0.00029510088525056173,
+      "opp_mix": [
+        0.69,
+        0.18,
+        0.13
+      ]
+    },
+    {
+      "random_win": 0.93,
+      "random_score": 0.86,
+      "random_p1": 0.96,
+      "random_p2": 0.9,
+      "negamax_win": 0.09,
+      "negamax_score": -0.82,
+      "negamax_p1": 0.14,
+      "negamax_p2": 0.04,
+      "step": 45056,
+      "pool": 2,
+      "ploss": -0.0146,
+      "vloss": 0.5562,
+      "entropy": 0.815,
+      "lr": 0.00029462638721838044,
+      "opp_mix": [
+        0.68,
+        0.19,
+        0.13
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.96,
+      "random_p2": 0.94,
+      "negamax_win": 0.01,
+      "negamax_score": -0.97,
+      "negamax_p1": 0.02,
+      "negamax_p2": 0.0,
+      "step": 47104,
+      "pool": 2,
+      "ploss": -0.0116,
+      "vloss": 0.6153,
+      "entropy": 0.844,
+      "lr": 0.00029413042536382124,
+      "opp_mix": [
+        0.68,
+        0.19,
+        0.13
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.98,
+      "random_p2": 0.9,
+      "negamax_win": 0.04,
+      "negamax_score": -0.92,
+      "negamax_p1": 0.04,
+      "negamax_p2": 0.04,
+      "step": 49152,
+      "pool": 2,
+      "ploss": -0.0164,
+      "vloss": 0.524,
+      "entropy": 0.887,
+      "lr": 0.0002936130818093392,
+      "opp_mix": [
+        0.67,
+        0.2,
+        0.13
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.98,
+      "random_p2": 0.92,
+      "negamax_win": 0.04,
+      "negamax_score": -0.92,
+      "negamax_p1": 0.04,
+      "negamax_p2": 0.04,
+      "step": 51200,
+      "pool": 2,
+      "ploss": -0.0152,
+      "vloss": 0.5327,
+      "entropy": 0.856,
+      "lr": 0.00029307444221781824,
+      "opp_mix": [
+        0.66,
+        0.2,
+        0.13
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.96,
+      "random_p2": 0.92,
+      "negamax_win": 0.01,
+      "negamax_score": -0.98,
+      "negamax_p1": 0.02,
+      "negamax_p2": 0.0,
+      "step": 53248,
+      "pool": 2,
+      "ploss": -0.0104,
+      "vloss": 0.5598,
+      "entropy": 0.799,
+      "lr": 0.0002925145957783869,
+      "opp_mix": [
+        0.66,
+        0.21,
+        0.14
+      ]
+    },
+    {
+      "random_win": 0.91,
+      "random_score": 0.82,
+      "random_p1": 0.94,
+      "random_p2": 0.88,
+      "negamax_win": 0.06,
+      "negamax_score": -0.87,
+      "negamax_p1": 0.12,
+      "negamax_p2": 0.0,
+      "step": 55296,
+      "pool": 2,
+      "ploss": -0.0134,
+      "vloss": 0.503,
+      "entropy": 0.857,
+      "lr": 0.00029193363519165033,
+      "opp_mix": [
+        0.65,
+        0.21,
+        0.14
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.92,
+      "random_p2": 0.96,
+      "negamax_win": 0.08,
+      "negamax_score": -0.84,
+      "negamax_p1": 0.1,
+      "negamax_p2": 0.06,
+      "step": 57344,
+      "pool": 2,
+      "ploss": -0.0078,
+      "vloss": 0.5916,
+      "entropy": 0.782,
+      "lr": 0.00029133165665434064,
+      "opp_mix": [
+        0.64,
+        0.22,
+        0.14
       ]
     },
     {
@@ -34,12 +601,96 @@
       "negamax_score": -0.84,
       "negamax_p1": 0.14,
       "negamax_p2": 0.02,
-      "step": 40960,
+      "step": 59392,
       "pool": 2,
-      "ploss": -0.0141,
-      "vloss": 0.5903,
-      "entropy": 0.917,
-      "lr": 0.00028777040407632347,
+      "ploss": -0.0196,
+      "vloss": 0.5558,
+      "entropy": 0.774,
+      "lr": 0.0002907087598433884,
+      "opp_mix": [
+        0.64,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "random_win": 0.91,
+      "random_score": 0.82,
+      "random_p1": 0.96,
+      "random_p2": 0.86,
+      "negamax_win": 0.08,
+      "negamax_score": -0.83,
+      "negamax_p1": 0.06,
+      "negamax_p2": 0.1,
+      "step": 61440,
+      "pool": 3,
+      "ploss": -0.0142,
+      "vloss": 0.5484,
+      "entropy": 0.787,
+      "lr": 0.0002900650478994179,
+      "opp_mix": [
+        0.63,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.96,
+      "random_p2": 0.96,
+      "negamax_win": 0.05,
+      "negamax_score": -0.9,
+      "negamax_p1": 0.1,
+      "negamax_p2": 0.0,
+      "step": 63488,
+      "pool": 3,
+      "ploss": -0.01,
+      "vloss": 0.5096,
+      "entropy": 0.753,
+      "lr": 0.000289400627409669,
+      "opp_mix": [
+        0.63,
+        0.23,
+        0.15
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.21,
+      "negamax_score": -0.53,
+      "negamax_p1": 0.2,
+      "negamax_p2": 0.22,
+      "step": 65536,
+      "pool": 3,
+      "ploss": -0.022,
+      "vloss": 0.4949,
+      "entropy": 0.754,
+      "lr": 0.0002887156083903483,
+      "opp_mix": [
+        0.62,
+        0.23,
+        0.15
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.24,
+      "negamax_score": -0.49,
+      "negamax_p1": 0.34,
+      "negamax_p2": 0.14,
+      "step": 67584,
+      "pool": 3,
+      "ploss": -0.0095,
+      "vloss": 0.4898,
+      "entropy": 0.789,
+      "lr": 0.0002880101042684119,
       "opp_mix": [
         0.61,
         0.24,
@@ -47,19 +698,355 @@
       ]
     },
     {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.96,
+      "random_p2": 0.96,
+      "negamax_win": 0.17,
+      "negamax_score": -0.64,
+      "negamax_p1": 0.2,
+      "negamax_p2": 0.14,
+      "step": 69632,
+      "pool": 3,
+      "ploss": -0.0203,
+      "vloss": 0.5828,
+      "entropy": 0.844,
+      "lr": 0.00028728423186278457,
+      "opp_mix": [
+        0.61,
+        0.24,
+        0.15
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.15,
+      "negamax_score": -0.66,
+      "negamax_p1": 0.2,
+      "negamax_p2": 0.1,
+      "step": 71680,
+      "pool": 3,
+      "ploss": -0.0261,
+      "vloss": 0.4855,
+      "entropy": 0.818,
+      "lr": 0.0002865381113650161,
+      "opp_mix": [
+        0.6,
+        0.24,
+        0.15
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.96,
+      "random_p2": 0.96,
+      "negamax_win": 0.24,
+      "negamax_score": -0.52,
+      "negamax_p1": 0.32,
+      "negamax_p2": 0.16,
+      "step": 73728,
+      "pool": 3,
+      "ploss": -0.015,
+      "vloss": 0.5718,
+      "entropy": 0.87,
+      "lr": 0.00028577186631938,
+      "opp_mix": [
+        0.6,
+        0.25,
+        0.16
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.14,
+      "negamax_score": -0.7,
+      "negamax_p1": 0.12,
+      "negamax_p2": 0.16,
+      "step": 75776,
+      "pool": 3,
+      "ploss": -0.0177,
+      "vloss": 0.5192,
+      "entropy": 0.837,
+      "lr": 0.00028498562360241674,
+      "opp_mix": [
+        0.59,
+        0.25,
+        0.16
+      ]
+    },
+    {
+      "random_win": 0.88,
+      "random_score": 0.76,
+      "random_p1": 0.94,
+      "random_p2": 0.82,
+      "negamax_win": 0.24,
+      "negamax_score": -0.48,
+      "negamax_p1": 0.34,
+      "negamax_p2": 0.14,
+      "step": 77824,
+      "pool": 3,
+      "ploss": -0.0206,
+      "vloss": 0.5516,
+      "entropy": 0.802,
+      "lr": 0.00028417951340192516,
+      "opp_mix": [
+        0.59,
+        0.26,
+        0.16
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.92,
+      "random_p2": 0.96,
+      "negamax_win": 0.22,
+      "negamax_score": -0.53,
+      "negamax_p1": 0.28,
+      "negamax_p2": 0.16,
+      "step": 79872,
+      "pool": 3,
+      "ploss": -0.0165,
+      "vloss": 0.5189,
+      "entropy": 0.865,
+      "lr": 0.00028335366919540566,
+      "opp_mix": [
+        0.58,
+        0.26,
+        0.16
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.96,
+      "random_p2": 0.94,
+      "negamax_win": 0.22,
+      "negamax_score": -0.56,
+      "negamax_p1": 0.3,
+      "negamax_p2": 0.14,
+      "step": 81920,
+      "pool": 4,
+      "ploss": -0.0201,
+      "vloss": 0.531,
+      "entropy": 0.825,
+      "lr": 0.00028250822772795883,
+      "opp_mix": [
+        0.58,
+        0.26,
+        0.16
+      ]
+    },
+    {
+      "random_win": 0.93,
+      "random_score": 0.86,
+      "random_p1": 0.94,
+      "random_p2": 0.92,
+      "negamax_win": 0.37,
+      "negamax_score": -0.23,
+      "negamax_p1": 0.42,
+      "negamax_p2": 0.32,
+      "step": 83968,
+      "pool": 4,
+      "ploss": -0.0162,
+      "vloss": 0.5391,
+      "entropy": 0.766,
+      "lr": 0.00028164332898964297,
+      "opp_mix": [
+        0.57,
+        0.27,
+        0.16
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.26,
+      "negamax_score": -0.46,
+      "negamax_p1": 0.38,
+      "negamax_p2": 0.14,
+      "step": 86016,
+      "pool": 4,
+      "ploss": -0.0238,
+      "vloss": 0.4875,
+      "entropy": 0.853,
+      "lr": 0.0002807591161922938,
+      "opp_mix": [
+        0.56,
+        0.27,
+        0.17
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.94,
+      "random_p2": 0.94,
+      "negamax_win": 0.27,
+      "negamax_score": -0.45,
+      "negamax_p1": 0.28,
+      "negamax_p2": 0.26,
+      "step": 88064,
+      "pool": 4,
+      "ploss": -0.0188,
+      "vloss": 0.4778,
+      "entropy": 0.745,
+      "lr": 0.0002798557357458118,
+      "opp_mix": [
+        0.56,
+        0.27,
+        0.17
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.96,
+      "random_p2": 0.92,
+      "negamax_win": 0.27,
+      "negamax_score": -0.45,
+      "negamax_p1": 0.28,
+      "negamax_p2": 0.26,
+      "step": 90112,
+      "pool": 4,
+      "ploss": -0.0191,
+      "vloss": 0.5616,
+      "entropy": 0.857,
+      "lr": 0.00027893333723391856,
+      "opp_mix": [
+        0.55,
+        0.28,
+        0.17
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.98,
+      "random_p2": 0.94,
+      "negamax_win": 0.23,
+      "negamax_score": -0.51,
+      "negamax_p1": 0.32,
+      "negamax_p2": 0.14,
+      "step": 92160,
+      "pool": 4,
+      "ploss": -0.0226,
+      "vloss": 0.4853,
+      "entropy": 0.882,
+      "lr": 0.0002779920733893892,
+      "opp_mix": [
+        0.55,
+        0.28,
+        0.17
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.4,
+      "negamax_score": -0.2,
+      "negamax_p1": 0.52,
+      "negamax_p2": 0.28,
+      "step": 94208,
+      "pool": 4,
+      "ploss": -0.0183,
+      "vloss": 0.5236,
+      "entropy": 0.735,
+      "lr": 0.00027703210006876173,
+      "opp_mix": [
+        0.54,
+        0.28,
+        0.17
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.94,
+      "random_p2": 0.96,
+      "negamax_win": 0.32,
+      "negamax_score": -0.35,
+      "negamax_p1": 0.44,
+      "negamax_p2": 0.2,
+      "step": 96256,
+      "pool": 4,
+      "ploss": -0.0222,
+      "vloss": 0.4378,
+      "entropy": 0.759,
+      "lr": 0.00027605357622653064,
+      "opp_mix": [
+        0.54,
+        0.29,
+        0.17
+      ]
+    },
+    {
       "random_win": 0.98,
       "random_score": 0.96,
       "random_p1": 0.98,
       "random_p2": 0.98,
-      "negamax_win": 0.08,
-      "negamax_score": -0.82,
-      "negamax_p1": 0.12,
-      "negamax_p2": 0.04,
-      "step": 61440,
-      "pool": 3,
-      "ploss": -0.0216,
-      "vloss": 0.4405,
-      "entropy": 0.982,
+      "negamax_win": 0.28,
+      "negamax_score": -0.39,
+      "negamax_p1": 0.4,
+      "negamax_p2": 0.16,
+      "step": 98304,
+      "pool": 4,
+      "ploss": -0.0161,
+      "vloss": 0.4499,
+      "entropy": 0.734,
+      "lr": 0.0002750566638888265,
+      "opp_mix": [
+        0.53,
+        0.29,
+        0.18
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.96,
+      "random_p2": 0.94,
+      "negamax_win": 0.34,
+      "negamax_score": -0.25,
+      "negamax_p1": 0.34,
+      "negamax_p2": 0.34,
+      "step": 100352,
+      "pool": 5,
+      "ploss": -0.0207,
+      "vloss": 0.4858,
+      "entropy": 0.711,
+      "lr": 0.0002740415281265874,
+      "opp_mix": [
+        0.53,
+        0.29,
+        0.18
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.42,
+      "negamax_score": -0.15,
+      "negamax_p1": 0.52,
+      "negamax_p2": 0.32,
+      "step": 102400,
+      "pool": 5,
+      "ploss": -0.0182,
+      "vloss": 0.4617,
+      "entropy": 0.733,
       "lr": 0.0002730083370282262,
       "opp_mix": [
         0.52,
@@ -68,20 +1055,314 @@
       ]
     },
     {
-      "random_win": 0.95,
-      "random_score": 0.9,
-      "random_p1": 1.0,
+      "random_win": 0.93,
+      "random_score": 0.86,
+      "random_p1": 0.96,
       "random_p2": 0.9,
-      "negamax_win": 0.18,
-      "negamax_score": -0.63,
-      "negamax_p1": 0.22,
-      "negamax_p2": 0.14,
-      "step": 81920,
-      "pool": 4,
-      "ploss": -0.0188,
-      "vloss": 0.4926,
-      "entropy": 0.961,
-      "lr": 0.00025329736469724076,
+      "negamax_win": 0.43,
+      "negamax_score": -0.11,
+      "negamax_p1": 0.6,
+      "negamax_p2": 0.26,
+      "step": 104448,
+      "pool": 5,
+      "ploss": -0.0223,
+      "vloss": 0.4799,
+      "entropy": 0.792,
+      "lr": 0.0002719572616717981,
+      "opp_mix": [
+        0.52,
+        0.3,
+        0.18
+      ]
+    },
+    {
+      "random_win": 0.92,
+      "random_score": 0.84,
+      "random_p1": 0.9,
+      "random_p2": 0.94,
+      "negamax_win": 0.34,
+      "negamax_score": -0.29,
+      "negamax_p1": 0.4,
+      "negamax_p2": 0.28,
+      "step": 106496,
+      "pool": 5,
+      "ploss": -0.0261,
+      "vloss": 0.4859,
+      "entropy": 0.821,
+      "lr": 0.0002708884760966728,
+      "opp_mix": [
+        0.51,
+        0.3,
+        0.18
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.98,
+      "random_p2": 0.94,
+      "negamax_win": 0.37,
+      "negamax_score": -0.23,
+      "negamax_p1": 0.3,
+      "negamax_p2": 0.44,
+      "step": 108544,
+      "pool": 5,
+      "ploss": -0.0232,
+      "vloss": 0.5236,
+      "entropy": 0.837,
+      "lr": 0.0002698021572747174,
+      "opp_mix": [
+        0.51,
+        0.31,
+        0.18
+      ]
+    },
+    {
+      "random_win": 0.93,
+      "random_score": 0.86,
+      "random_p1": 0.98,
+      "random_p2": 0.88,
+      "negamax_win": 0.41,
+      "negamax_score": -0.18,
+      "negamax_p1": 0.5,
+      "negamax_p2": 0.32,
+      "step": 110592,
+      "pool": 5,
+      "ploss": -0.0269,
+      "vloss": 0.5215,
+      "entropy": 0.849,
+      "lr": 0.00026869848508099235,
+      "opp_mix": [
+        0.5,
+        0.31,
+        0.18
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 0.98,
+      "random_p2": 1.0,
+      "negamax_win": 0.39,
+      "negamax_score": -0.2,
+      "negamax_p1": 0.44,
+      "negamax_p2": 0.34,
+      "step": 112640,
+      "pool": 5,
+      "ploss": -0.0233,
+      "vloss": 0.4398,
+      "entropy": 0.842,
+      "lr": 0.0002675776422639675,
+      "opp_mix": [
+        0.5,
+        0.31,
+        0.19
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.44,
+      "negamax_score": -0.06,
+      "negamax_p1": 0.52,
+      "negamax_p2": 0.36,
+      "step": 114688,
+      "pool": 5,
+      "ploss": -0.0239,
+      "vloss": 0.5197,
+      "entropy": 0.866,
+      "lr": 0.0002664398144152625,
+      "opp_mix": [
+        0.5,
+        0.32,
+        0.19
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.53,
+      "negamax_score": 0.09,
+      "negamax_p1": 0.54,
+      "negamax_p2": 0.52,
+      "step": 116736,
+      "pool": 5,
+      "ploss": -0.0243,
+      "vloss": 0.5328,
+      "entropy": 0.792,
+      "lr": 0.00026528518993891565,
+      "opp_mix": [
+        0.49,
+        0.32,
+        0.19
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.57,
+      "negamax_score": 0.15,
+      "negamax_p1": 0.64,
+      "negamax_p2": 0.5,
+      "step": 118784,
+      "pool": 5,
+      "ploss": -0.0222,
+      "vloss": 0.5237,
+      "entropy": 0.756,
+      "lr": 0.00026411396002018814,
+      "opp_mix": [
+        0.49,
+        0.32,
+        0.19
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 0.98,
+      "random_p2": 1.0,
+      "negamax_win": 0.6,
+      "negamax_score": 0.22,
+      "negamax_p1": 0.76,
+      "negamax_p2": 0.44,
+      "step": 120832,
+      "pool": 6,
+      "ploss": -0.0279,
+      "vloss": 0.4552,
+      "entropy": 0.692,
+      "lr": 0.0002629263185939065,
+      "opp_mix": [
+        0.48,
+        0.33,
+        0.19
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.53,
+      "negamax_score": 0.11,
+      "negamax_p1": 0.62,
+      "negamax_p2": 0.44,
+      "step": 122880,
+      "pool": 6,
+      "ploss": -0.0157,
+      "vloss": 0.456,
+      "entropy": 0.675,
+      "lr": 0.000261722462312351,
+      "opp_mix": [
+        0.48,
+        0.33,
+        0.19
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.59,
+      "negamax_score": 0.24,
+      "negamax_p1": 0.68,
+      "negamax_p2": 0.5,
+      "step": 124928,
+      "pool": 6,
+      "ploss": -0.0065,
+      "vloss": 0.5381,
+      "entropy": 0.637,
+      "lr": 0.00026050259051269334,
+      "opp_mix": [
+        0.47,
+        0.33,
+        0.19
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.55,
+      "negamax_score": 0.16,
+      "negamax_p1": 0.66,
+      "negamax_p2": 0.44,
+      "step": 126976,
+      "pool": 6,
+      "ploss": -0.0144,
+      "vloss": 0.4561,
+      "entropy": 0.665,
+      "lr": 0.0002592669051839897,
+      "opp_mix": [
+        0.47,
+        0.34,
+        0.2
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.62,
+      "negamax_score": 0.3,
+      "negamax_p1": 0.66,
+      "negamax_p2": 0.58,
+      "step": 129024,
+      "pool": 6,
+      "ploss": -0.0262,
+      "vloss": 0.4772,
+      "entropy": 0.676,
+      "lr": 0.00025801561093373546,
+      "opp_mix": [
+        0.46,
+        0.34,
+        0.2
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.96,
+      "random_p2": 0.98,
+      "negamax_win": 0.56,
+      "negamax_score": 0.21,
+      "negamax_p1": 0.64,
+      "negamax_p2": 0.48,
+      "step": 131072,
+      "pool": 6,
+      "ploss": -0.0241,
+      "vloss": 0.4716,
+      "entropy": 0.711,
+      "lr": 0.0002567489149539855,
+      "opp_mix": [
+        0.46,
+        0.34,
+        0.2
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.71,
+      "negamax_score": 0.45,
+      "negamax_p1": 0.72,
+      "negamax_p2": 0.7,
+      "step": 133120,
+      "pool": 6,
+      "ploss": -0.0146,
+      "vloss": 0.4832,
+      "entropy": 0.729,
+      "lr": 0.0002554670269870469,
       "opp_mix": [
         0.45,
         0.35,
@@ -91,43 +1372,190 @@
     {
       "random_win": 0.97,
       "random_score": 0.94,
-      "random_p1": 0.94,
-      "random_p2": 1.0,
-      "negamax_win": 0.2,
-      "negamax_score": -0.55,
-      "negamax_p1": 0.3,
-      "negamax_p2": 0.1,
-      "step": 100352,
-      "pool": 5,
-      "ploss": -0.0212,
-      "vloss": 0.5468,
-      "entropy": 0.9,
-      "lr": 0.00023206858366622631,
+      "random_p1": 0.96,
+      "random_p2": 0.98,
+      "negamax_win": 0.67,
+      "negamax_score": 0.39,
+      "negamax_p1": 0.76,
+      "negamax_p2": 0.58,
+      "step": 135168,
+      "pool": 6,
+      "ploss": -0.0198,
+      "vloss": 0.4595,
+      "entropy": 0.704,
+      "lr": 0.0002541701592907493,
       "opp_mix": [
-        0.39,
-        0.39,
-        0.22
+        0.45,
+        0.35,
+        0.2
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.65,
+      "negamax_score": 0.34,
+      "negamax_p1": 0.68,
+      "negamax_p2": 0.62,
+      "step": 137216,
+      "pool": 6,
+      "ploss": -0.0156,
+      "vloss": 0.5575,
+      "entropy": 0.693,
+      "lr": 0.0002528585266032991,
+      "opp_mix": [
+        0.45,
+        0.35,
+        0.2
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.67,
+      "negamax_score": 0.39,
+      "negamax_p1": 0.7,
+      "negamax_p2": 0.64,
+      "step": 139264,
+      "pool": 6,
+      "ploss": -0.0199,
+      "vloss": 0.4825,
+      "entropy": 0.678,
+      "lr": 0.00025153234610772235,
+      "opp_mix": [
+        0.44,
+        0.35,
+        0.2
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.96,
+      "random_p2": 0.94,
+      "negamax_win": 0.68,
+      "negamax_score": 0.38,
+      "negamax_p1": 0.68,
+      "negamax_p2": 0.68,
+      "step": 141312,
+      "pool": 7,
+      "ploss": -0.0212,
+      "vloss": 0.5535,
+      "entropy": 0.736,
+      "lr": 0.00025019183739590314,
+      "opp_mix": [
+        0.44,
+        0.36,
+        0.21
       ]
     },
     {
       "random_win": 0.96,
       "random_score": 0.92,
-      "random_p1": 0.98,
-      "random_p2": 0.94,
-      "negamax_win": 0.45,
-      "negamax_score": -0.1,
-      "negamax_p1": 0.48,
-      "negamax_p2": 0.42,
-      "step": 120832,
-      "pool": 6,
-      "ploss": -0.025,
-      "vloss": 0.5088,
-      "entropy": 0.845,
-      "lr": 0.0002055970806432193,
+      "random_p1": 1.0,
+      "random_p2": 0.92,
+      "negamax_win": 0.73,
+      "negamax_score": 0.51,
+      "negamax_p1": 0.8,
+      "negamax_p2": 0.66,
+      "step": 143360,
+      "pool": 7,
+      "ploss": -0.0181,
+      "vloss": 0.4545,
+      "entropy": 0.711,
+      "lr": 0.00024883722243222305,
       "opp_mix": [
-        0.33,
         0.43,
-        0.24
+        0.36,
+        0.21
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.96,
+      "random_p2": 0.94,
+      "negamax_win": 0.57,
+      "negamax_score": 0.2,
+      "negamax_p1": 0.7,
+      "negamax_p2": 0.44,
+      "step": 145408,
+      "pool": 7,
+      "ploss": -0.02,
+      "vloss": 0.4885,
+      "entropy": 0.747,
+      "lr": 0.00024746872551680807,
+      "opp_mix": [
+        0.43,
+        0.36,
+        0.21
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.74,
+      "negamax_score": 0.52,
+      "negamax_p1": 0.76,
+      "negamax_p2": 0.72,
+      "step": 147456,
+      "pool": 7,
+      "ploss": -0.0207,
+      "vloss": 0.524,
+      "entropy": 0.735,
+      "lr": 0.00024608657324838817,
+      "opp_mix": [
+        0.43,
+        0.37,
+        0.21
+      ]
+    },
+    {
+      "random_win": 0.93,
+      "random_score": 0.86,
+      "random_p1": 0.96,
+      "random_p2": 0.9,
+      "negamax_win": 0.68,
+      "negamax_score": 0.42,
+      "negamax_p1": 0.74,
+      "negamax_p2": 0.62,
+      "step": 149504,
+      "pool": 7,
+      "ploss": -0.0197,
+      "vloss": 0.4515,
+      "entropy": 0.77,
+      "lr": 0.0002446909944867766,
+      "opp_mix": [
+        0.42,
+        0.37,
+        0.21
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.57,
+      "negamax_score": 0.21,
+      "negamax_p1": 0.7,
+      "negamax_p2": 0.44,
+      "step": 151552,
+      "pool": 7,
+      "ploss": -0.021,
+      "vloss": 0.4848,
+      "entropy": 0.732,
+      "lr": 0.00024328222031497524,
+      "opp_mix": [
+        0.42,
+        0.37,
+        0.21
       ]
     },
     {
@@ -135,19 +1563,691 @@
       "random_score": 0.92,
       "random_p1": 0.94,
       "random_p2": 0.98,
-      "negamax_win": 0.55,
-      "negamax_score": 0.1,
-      "negamax_p1": 0.64,
-      "negamax_p2": 0.46,
-      "step": 141312,
+      "negamax_win": 0.62,
+      "negamax_score": 0.28,
+      "negamax_p1": 0.62,
+      "negamax_p2": 0.62,
+      "step": 153600,
       "pool": 7,
-      "ploss": -0.0244,
-      "vloss": 0.4784,
-      "entropy": 0.906,
-      "lr": 0.00017726543318698616,
+      "ploss": -0.0183,
+      "vloss": 0.5054,
+      "entropy": 0.702,
+      "lr": 0.0002418604840009107,
       "opp_mix": [
-        0.28,
-        0.46,
+        0.41,
+        0.37,
+        0.21
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.73,
+      "negamax_score": 0.51,
+      "negamax_p1": 0.72,
+      "negamax_p2": 0.74,
+      "step": 155648,
+      "pool": 7,
+      "ploss": -0.0165,
+      "vloss": 0.442,
+      "entropy": 0.699,
+      "lr": 0.0002404260209588097,
+      "opp_mix": [
+        0.41,
+        0.38,
+        0.21
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.98,
+      "random_p2": 0.9,
+      "negamax_win": 0.7,
+      "negamax_score": 0.4,
+      "negamax_p1": 0.76,
+      "negamax_p2": 0.64,
+      "step": 157696,
+      "pool": 7,
+      "ploss": -0.024,
+      "vloss": 0.4326,
+      "entropy": 0.683,
+      "lr": 0.00023897906871021864,
+      "opp_mix": [
+        0.41,
+        0.38,
+        0.22
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.94,
+      "random_p2": 0.98,
+      "negamax_win": 0.63,
+      "negamax_score": 0.34,
+      "negamax_p1": 0.82,
+      "negamax_p2": 0.44,
+      "step": 159744,
+      "pool": 7,
+      "ploss": -0.022,
+      "vloss": 0.4243,
+      "entropy": 0.676,
+      "lr": 0.0002375198668446742,
+      "opp_mix": [
+        0.4,
+        0.38,
+        0.22
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.66,
+      "negamax_score": 0.36,
+      "negamax_p1": 0.74,
+      "negamax_p2": 0.58,
+      "step": 161792,
+      "pool": 8,
+      "ploss": -0.0195,
+      "vloss": 0.3721,
+      "entropy": 0.663,
+      "lr": 0.0002360486569800316,
+      "opp_mix": [
+        0.4,
+        0.38,
+        0.22
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.94,
+      "random_p2": 0.96,
+      "negamax_win": 0.74,
+      "negamax_score": 0.49,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.62,
+      "step": 163840,
+      "pool": 8,
+      "ploss": -0.0232,
+      "vloss": 0.4493,
+      "entropy": 0.629,
+      "lr": 0.0002345656827224568,
+      "opp_mix": [
+        0.39,
+        0.39,
+        0.22
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 0.98,
+      "random_p2": 1.0,
+      "negamax_win": 0.6,
+      "negamax_score": 0.29,
+      "negamax_p1": 0.64,
+      "negamax_p2": 0.56,
+      "step": 165888,
+      "pool": 8,
+      "ploss": -0.0168,
+      "vloss": 0.4584,
+      "entropy": 0.619,
+      "lr": 0.00023307118962609012,
+      "opp_mix": [
+        0.39,
+        0.39,
+        0.22
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.65,
+      "negamax_score": 0.36,
+      "negamax_p1": 0.66,
+      "negamax_p2": 0.64,
+      "step": 167936,
+      "pool": 8,
+      "ploss": -0.0228,
+      "vloss": 0.4479,
+      "entropy": 0.649,
+      "lr": 0.00023156542515238634,
+      "opp_mix": [
+        0.39,
+        0.39,
+        0.22
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.96,
+      "random_p2": 0.98,
+      "negamax_win": 0.67,
+      "negamax_score": 0.36,
+      "negamax_p1": 0.74,
+      "negamax_p2": 0.6,
+      "step": 169984,
+      "pool": 8,
+      "ploss": -0.0211,
+      "vloss": 0.4718,
+      "entropy": 0.632,
+      "lr": 0.00023004863862913973,
+      "opp_mix": [
+        0.38,
+        0.39,
+        0.22
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.98,
+      "random_p2": 0.92,
+      "negamax_win": 0.7,
+      "negamax_score": 0.43,
+      "negamax_p1": 0.78,
+      "negamax_p2": 0.62,
+      "step": 172032,
+      "pool": 8,
+      "ploss": -0.0199,
+      "vloss": 0.5603,
+      "entropy": 0.627,
+      "lr": 0.0002285210812091998,
+      "opp_mix": [
+        0.38,
+        0.4,
+        0.22
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.78,
+      "negamax_score": 0.58,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.68,
+      "step": 174080,
+      "pool": 8,
+      "ploss": -0.0139,
+      "vloss": 0.4617,
+      "entropy": 0.627,
+      "lr": 0.00022698300582888476,
+      "opp_mix": [
+        0.38,
+        0.4,
+        0.22
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.98,
+      "random_p2": 0.92,
+      "negamax_win": 0.72,
+      "negamax_score": 0.47,
+      "negamax_p1": 0.82,
+      "negamax_p2": 0.62,
+      "step": 176128,
+      "pool": 8,
+      "ploss": -0.0156,
+      "vloss": 0.3625,
+      "entropy": 0.593,
+      "lr": 0.00022543466716609995,
+      "opp_mix": [
+        0.37,
+        0.4,
+        0.23
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 1.0,
+      "random_p2": 0.9,
+      "negamax_win": 0.71,
+      "negamax_score": 0.45,
+      "negamax_p1": 0.68,
+      "negamax_p2": 0.74,
+      "step": 178176,
+      "pool": 8,
+      "ploss": -0.0237,
+      "vloss": 0.404,
+      "entropy": 0.605,
+      "lr": 0.00022387632159816763,
+      "opp_mix": [
+        0.37,
+        0.4,
+        0.23
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.96,
+      "random_p2": 0.98,
+      "negamax_win": 0.77,
+      "negamax_score": 0.56,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.68,
+      "step": 180224,
+      "pool": 9,
+      "ploss": -0.016,
+      "vloss": 0.4282,
+      "entropy": 0.564,
+      "lr": 0.0002223082271593752,
+      "opp_mix": [
+        0.37,
+        0.41,
+        0.23
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.69,
+      "negamax_score": 0.43,
+      "negamax_p1": 0.8,
+      "negamax_p2": 0.58,
+      "step": 182272,
+      "pool": 9,
+      "ploss": -0.0179,
+      "vloss": 0.383,
+      "entropy": 0.595,
+      "lr": 0.0002207306434982498,
+      "opp_mix": [
+        0.36,
+        0.41,
+        0.23
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.75,
+      "negamax_score": 0.56,
+      "negamax_p1": 0.82,
+      "negamax_p2": 0.68,
+      "step": 184320,
+      "pool": 9,
+      "ploss": -0.0182,
+      "vloss": 0.4679,
+      "entropy": 0.575,
+      "lr": 0.0002191438318345647,
+      "opp_mix": [
+        0.36,
+        0.41,
+        0.23
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.77,
+      "negamax_score": 0.54,
+      "negamax_p1": 0.82,
+      "negamax_p2": 0.72,
+      "step": 186368,
+      "pool": 9,
+      "ploss": -0.0171,
+      "vloss": 0.4823,
+      "entropy": 0.582,
+      "lr": 0.00021754805491608627,
+      "opp_mix": [
+        0.36,
+        0.41,
+        0.23
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.75,
+      "negamax_score": 0.54,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.62,
+      "step": 188416,
+      "pool": 9,
+      "ploss": -0.0085,
+      "vloss": 0.4486,
+      "entropy": 0.505,
+      "lr": 0.00021594357697506738,
+      "opp_mix": [
+        0.35,
+        0.42,
+        0.23
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 1.0,
+      "random_p2": 0.92,
+      "negamax_win": 0.72,
+      "negamax_score": 0.48,
+      "negamax_p1": 0.7,
+      "negamax_p2": 0.74,
+      "step": 190464,
+      "pool": 9,
+      "ploss": -0.0166,
+      "vloss": 0.4059,
+      "entropy": 0.564,
+      "lr": 0.00021433066368449548,
+      "opp_mix": [
+        0.35,
+        0.42,
+        0.23
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.71,
+      "negamax_score": 0.45,
+      "negamax_p1": 0.8,
+      "negamax_p2": 0.62,
+      "step": 192512,
+      "pool": 9,
+      "ploss": -0.0156,
+      "vloss": 0.3878,
+      "entropy": 0.531,
+      "lr": 0.00021270958211410163,
+      "opp_mix": [
+        0.35,
+        0.42,
+        0.23
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.96,
+      "random_p2": 0.98,
+      "negamax_win": 0.68,
+      "negamax_score": 0.39,
+      "negamax_p1": 0.74,
+      "negamax_p2": 0.62,
+      "step": 194560,
+      "pool": 9,
+      "ploss": -0.0233,
+      "vloss": 0.3807,
+      "entropy": 0.537,
+      "lr": 0.00021108060068613868,
+      "opp_mix": [
+        0.34,
+        0.42,
+        0.24
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.96,
+      "random_p2": 0.98,
+      "negamax_win": 0.82,
+      "negamax_score": 0.68,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.74,
+      "step": 196608,
+      "pool": 9,
+      "ploss": -0.0177,
+      "vloss": 0.3541,
+      "entropy": 0.552,
+      "lr": 0.00020944398913093533,
+      "opp_mix": [
+        0.34,
+        0.42,
+        0.24
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.73,
+      "negamax_score": 0.49,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.56,
+      "step": 198656,
+      "pool": 9,
+      "ploss": -0.0158,
+      "vloss": 0.4108,
+      "entropy": 0.539,
+      "lr": 0.00020780001844223343,
+      "opp_mix": [
+        0.34,
+        0.43,
+        0.24
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.74,
+      "negamax_score": 0.53,
+      "negamax_p1": 0.78,
+      "negamax_p2": 0.7,
+      "step": 200704,
+      "pool": 10,
+      "ploss": -0.0261,
+      "vloss": 0.4325,
+      "entropy": 0.563,
+      "lr": 0.00020614896083231643,
+      "opp_mix": [
+        0.33,
+        0.43,
+        0.24
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.78,
+      "negamax_score": 0.59,
+      "negamax_p1": 0.82,
+      "negamax_p2": 0.74,
+      "step": 202752,
+      "pool": 10,
+      "ploss": -0.0154,
+      "vloss": 0.3945,
+      "entropy": 0.593,
+      "lr": 0.0002044910896869358,
+      "opp_mix": [
+        0.33,
+        0.43,
+        0.24
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.96,
+      "random_p2": 0.98,
+      "negamax_win": 0.83,
+      "negamax_score": 0.7,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.76,
+      "step": 204800,
+      "pool": 10,
+      "ploss": -0.0212,
+      "vloss": 0.4292,
+      "entropy": 0.6,
+      "lr": 0.00020282667952004313,
+      "opp_mix": [
+        0.33,
+        0.43,
+        0.24
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.76,
+      "negamax_score": 0.58,
+      "negamax_p1": 0.76,
+      "negamax_p2": 0.76,
+      "step": 206848,
+      "pool": 10,
+      "ploss": -0.0231,
+      "vloss": 0.4208,
+      "entropy": 0.608,
+      "lr": 0.00020115600592833562,
+      "opp_mix": [
+        0.32,
+        0.44,
+        0.24
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.75,
+      "negamax_score": 0.56,
+      "negamax_p1": 0.8,
+      "negamax_p2": 0.7,
+      "step": 208896,
+      "pool": 10,
+      "ploss": -0.0245,
+      "vloss": 0.4358,
+      "entropy": 0.622,
+      "lr": 0.00019947934554562203,
+      "opp_mix": [
+        0.32,
+        0.44,
+        0.24
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.98,
+      "random_p2": 0.9,
+      "negamax_win": 0.75,
+      "negamax_score": 0.51,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.64,
+      "step": 210944,
+      "pool": 10,
+      "ploss": -0.0253,
+      "vloss": 0.4375,
+      "entropy": 0.624,
+      "lr": 0.0001977969759970174,
+      "opp_mix": [
+        0.32,
+        0.44,
+        0.24
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.76,
+      "negamax_score": 0.57,
+      "negamax_p1": 0.84,
+      "negamax_p2": 0.68,
+      "step": 212992,
+      "pool": 10,
+      "ploss": -0.0243,
+      "vloss": 0.4032,
+      "entropy": 0.634,
+      "lr": 0.00019610917585297276,
+      "opp_mix": [
+        0.31,
+        0.44,
+        0.24
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.69,
+      "negamax_score": 0.45,
+      "negamax_p1": 0.68,
+      "negamax_p2": 0.7,
+      "step": 215040,
+      "pool": 10,
+      "ploss": -0.0155,
+      "vloss": 0.3927,
+      "entropy": 0.621,
+      "lr": 0.00019441622458314916,
+      "opp_mix": [
+        0.31,
+        0.44,
+        0.25
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.75,
+      "negamax_score": 0.57,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.56,
+      "step": 217088,
+      "pool": 10,
+      "ploss": -0.0247,
+      "vloss": 0.4453,
+      "entropy": 0.665,
+      "lr": 0.00019271840251014244,
+      "opp_mix": [
+        0.31,
+        0.45,
+        0.25
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.96,
+      "random_p2": 0.92,
+      "negamax_win": 0.82,
+      "negamax_score": 0.7,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.7,
+      "step": 219136,
+      "pool": 10,
+      "ploss": -0.0207,
+      "vloss": 0.4636,
+      "entropy": 0.584,
+      "lr": 0.00019101599076306672,
+      "opp_mix": [
+        0.3,
+        0.45,
         0.25
       ]
     },
@@ -156,16 +2256,520 @@
       "random_score": 0.94,
       "random_p1": 0.96,
       "random_p2": 0.98,
-      "negamax_win": 0.48,
-      "negamax_score": -0.01,
-      "negamax_p1": 0.54,
-      "negamax_p2": 0.42,
-      "step": 161792,
-      "pool": 8,
-      "ploss": -0.0279,
-      "vloss": 0.5436,
-      "entropy": 0.846,
-      "lr": 0.0001483717877520217,
+      "negamax_win": 0.72,
+      "negamax_score": 0.48,
+      "negamax_p1": 0.8,
+      "negamax_p2": 0.64,
+      "step": 221184,
+      "pool": 11,
+      "ploss": -0.0198,
+      "vloss": 0.4203,
+      "entropy": 0.607,
+      "lr": 0.00018930927123100443,
+      "opp_mix": [
+        0.3,
+        0.45,
+        0.25
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.77,
+      "negamax_score": 0.56,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.66,
+      "step": 223232,
+      "pool": 11,
+      "ploss": -0.0206,
+      "vloss": 0.4611,
+      "entropy": 0.548,
+      "lr": 0.00018759852651633048,
+      "opp_mix": [
+        0.3,
+        0.45,
+        0.25
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.75,
+      "negamax_score": 0.55,
+      "negamax_p1": 0.82,
+      "negamax_p2": 0.68,
+      "step": 225280,
+      "pool": 11,
+      "ploss": -0.0189,
+      "vloss": 0.3404,
+      "entropy": 0.562,
+      "lr": 0.00018588403988791853,
+      "opp_mix": [
+        0.3,
+        0.45,
+        0.25
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.78,
+      "negamax_score": 0.61,
+      "negamax_p1": 0.82,
+      "negamax_p2": 0.74,
+      "step": 227328,
+      "pool": 11,
+      "ploss": -0.0212,
+      "vloss": 0.4696,
+      "entropy": 0.574,
+      "lr": 0.00018416609523423633,
+      "opp_mix": [
+        0.29,
+        0.46,
+        0.25
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.96,
+      "random_p2": 0.96,
+      "negamax_win": 0.8,
+      "negamax_score": 0.66,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.74,
+      "step": 229376,
+      "pool": 11,
+      "ploss": -0.0202,
+      "vloss": 0.3905,
+      "entropy": 0.578,
+      "lr": 0.00018244497701633923,
+      "opp_mix": [
+        0.29,
+        0.46,
+        0.25
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 0.98,
+      "random_p2": 0.9,
+      "negamax_win": 0.85,
+      "negamax_score": 0.73,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.78,
+      "step": 231424,
+      "pool": 11,
+      "ploss": -0.0195,
+      "vloss": 0.4494,
+      "entropy": 0.545,
+      "lr": 0.00018072097022076825,
+      "opp_mix": [
+        0.29,
+        0.46,
+        0.25
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.85,
+      "negamax_score": 0.76,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.76,
+      "step": 233472,
+      "pool": 11,
+      "ploss": -0.0235,
+      "vloss": 0.3989,
+      "entropy": 0.583,
+      "lr": 0.0001789943603123615,
+      "opp_mix": [
+        0.28,
+        0.46,
+        0.25
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.78,
+      "negamax_score": 0.6,
+      "negamax_p1": 0.82,
+      "negamax_p2": 0.74,
+      "step": 235520,
+      "pool": 11,
+      "ploss": -0.0174,
+      "vloss": 0.4024,
+      "entropy": 0.554,
+      "lr": 0.00017726543318698616,
+      "opp_mix": [
+        0.28,
+        0.46,
+        0.25
+      ]
+    },
+    {
+      "random_win": 0.94,
+      "random_score": 0.88,
+      "random_p1": 1.0,
+      "random_p2": 0.88,
+      "negamax_win": 0.85,
+      "negamax_score": 0.72,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.78,
+      "step": 237568,
+      "pool": 11,
+      "ploss": -0.0099,
+      "vloss": 0.4522,
+      "entropy": 0.529,
+      "lr": 0.00017553447512419935,
+      "opp_mix": [
+        0.28,
+        0.47,
+        0.26
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.83,
+      "negamax_score": 0.71,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.78,
+      "step": 239616,
+      "pool": 11,
+      "ploss": -0.0198,
+      "vloss": 0.3463,
+      "entropy": 0.564,
+      "lr": 0.00017380177273984527,
+      "opp_mix": [
+        0.27,
+        0.47,
+        0.26
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 1.0,
+      "random_p2": 0.92,
+      "negamax_win": 0.8,
+      "negamax_score": 0.63,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.74,
+      "step": 241664,
+      "pool": 12,
+      "ploss": -0.0258,
+      "vloss": 0.3152,
+      "entropy": 0.581,
+      "lr": 0.0001720676129385968,
+      "opp_mix": [
+        0.27,
+        0.47,
+        0.26
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.98,
+      "random_p2": 0.94,
+      "negamax_win": 0.85,
+      "negamax_score": 0.72,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.78,
+      "step": 243712,
+      "pool": 12,
+      "ploss": -0.0191,
+      "vloss": 0.4287,
+      "entropy": 0.578,
+      "lr": 0.00017033228286644897,
+      "opp_mix": [
+        0.27,
+        0.47,
+        0.26
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.78,
+      "negamax_score": 0.64,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.7,
+      "step": 245760,
+      "pool": 12,
+      "ploss": -0.0172,
+      "vloss": 0.4125,
+      "entropy": 0.55,
+      "lr": 0.00016859606986317286,
+      "opp_mix": [
+        0.27,
+        0.47,
+        0.26
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.98,
+      "random_p2": 0.94,
+      "negamax_win": 0.81,
+      "negamax_score": 0.67,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.7,
+      "step": 247808,
+      "pool": 12,
+      "ploss": -0.0232,
+      "vloss": 0.4375,
+      "entropy": 0.573,
+      "lr": 0.00016685926141473737,
+      "opp_mix": [
+        0.26,
+        0.48,
+        0.26
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.8,
+      "negamax_score": 0.63,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.74,
+      "step": 249856,
+      "pool": 12,
+      "ploss": -0.0205,
+      "vloss": 0.412,
+      "entropy": 0.537,
+      "lr": 0.00016512214510570642,
+      "opp_mix": [
+        0.26,
+        0.48,
+        0.26
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.78,
+      "negamax_score": 0.61,
+      "negamax_p1": 0.78,
+      "negamax_p2": 0.78,
+      "step": 251904,
+      "pool": 12,
+      "ploss": -0.0178,
+      "vloss": 0.3242,
+      "entropy": 0.532,
+      "lr": 0.00016338500857162008,
+      "opp_mix": [
+        0.26,
+        0.48,
+        0.26
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.78,
+      "negamax_score": 0.6,
+      "negamax_p1": 0.84,
+      "negamax_p2": 0.72,
+      "step": 253952,
+      "pool": 12,
+      "ploss": -0.0183,
+      "vloss": 0.3485,
+      "entropy": 0.555,
+      "lr": 0.00016164813945136755,
+      "opp_mix": [
+        0.26,
+        0.48,
+        0.26
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.84,
+      "negamax_score": 0.72,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.74,
+      "step": 256000,
+      "pool": 12,
+      "ploss": -0.0211,
+      "vloss": 0.4167,
+      "entropy": 0.555,
+      "lr": 0.00015991182533955884,
+      "opp_mix": [
+        0.26,
+        0.48,
+        0.27
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.83,
+      "negamax_score": 0.68,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.74,
+      "step": 258048,
+      "pool": 12,
+      "ploss": -0.0236,
+      "vloss": 0.3703,
+      "entropy": 0.593,
+      "lr": 0.00015817635373890454,
+      "opp_mix": [
+        0.25,
+        0.48,
+        0.27
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.84,
+      "negamax_score": 0.71,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.82,
+      "step": 260096,
+      "pool": 13,
+      "ploss": -0.0165,
+      "vloss": 0.3512,
+      "entropy": 0.539,
+      "lr": 0.00015644201201261043,
+      "opp_mix": [
+        0.25,
+        0.48,
+        0.27
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.78,
+      "negamax_score": 0.63,
+      "negamax_p1": 0.84,
+      "negamax_p2": 0.72,
+      "step": 262144,
+      "pool": 13,
+      "ploss": -0.0164,
+      "vloss": 0.3618,
+      "entropy": 0.547,
+      "lr": 0.0001547090873367951,
+      "opp_mix": [
+        0.25,
+        0.48,
+        0.27
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.96,
+      "random_p2": 1.0,
+      "negamax_win": 0.77,
+      "negamax_score": 0.57,
+      "negamax_p1": 0.82,
+      "negamax_p2": 0.72,
+      "step": 264192,
+      "pool": 13,
+      "ploss": -0.0221,
+      "vloss": 0.3633,
+      "entropy": 0.535,
+      "lr": 0.0001529778666529389,
+      "opp_mix": [
+        0.25,
+        0.48,
+        0.27
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.83,
+      "negamax_score": 0.68,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.7,
+      "step": 266240,
+      "pool": 13,
+      "ploss": -0.0226,
+      "vloss": 0.4858,
+      "entropy": 0.571,
+      "lr": 0.00015124863662037137,
+      "opp_mix": [
+        0.25,
+        0.48,
+        0.27
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.74,
+      "negamax_score": 0.51,
+      "negamax_p1": 0.82,
+      "negamax_p2": 0.66,
+      "step": 268288,
+      "pool": 13,
+      "ploss": -0.0199,
+      "vloss": 0.4799,
+      "entropy": 0.54,
+      "lr": 0.00014952168356880565,
+      "opp_mix": [
+        0.24,
+        0.48,
+        0.28
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.8,
+      "negamax_score": 0.64,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.74,
+      "step": 270336,
+      "pool": 13,
+      "ploss": -0.0199,
+      "vloss": 0.376,
+      "entropy": 0.549,
+      "lr": 0.00014779729345092748,
       "opp_mix": [
         0.24,
         0.48,
@@ -175,18 +2779,249 @@
     {
       "random_win": 0.96,
       "random_score": 0.92,
+      "random_p1": 0.96,
+      "random_p2": 0.96,
+      "negamax_win": 0.79,
+      "negamax_score": 0.61,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.7,
+      "step": 272384,
+      "pool": 13,
+      "ploss": -0.0212,
+      "vloss": 0.308,
+      "entropy": 0.552,
+      "lr": 0.00014607575179504618,
+      "opp_mix": [
+        0.24,
+        0.48,
+        0.28
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.97,
       "random_p1": 1.0,
-      "random_p2": 0.92,
-      "negamax_win": 0.72,
-      "negamax_score": 0.45,
-      "negamax_p1": 0.86,
-      "negamax_p2": 0.58,
-      "step": 180224,
-      "pool": 9,
-      "ploss": -0.0271,
-      "vloss": 0.5294,
-      "entropy": 0.729,
-      "lr": 0.0001229816473262347,
+      "random_p2": 0.96,
+      "negamax_win": 0.82,
+      "negamax_score": 0.69,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.76,
+      "step": 274432,
+      "pool": 13,
+      "ploss": -0.0208,
+      "vloss": 0.3582,
+      "entropy": 0.549,
+      "lr": 0.0001443573436578166,
+      "opp_mix": [
+        0.24,
+        0.48,
+        0.28
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.8,
+      "negamax_score": 0.64,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.72,
+      "step": 276480,
+      "pool": 13,
+      "ploss": -0.0211,
+      "vloss": 0.2958,
+      "entropy": 0.504,
+      "lr": 0.00014264235357703872,
+      "opp_mix": [
+        0.24,
+        0.48,
+        0.28
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.89,
+      "negamax_score": 0.8,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.84,
+      "step": 278528,
+      "pool": 13,
+      "ploss": -0.0146,
+      "vloss": 0.514,
+      "entropy": 0.531,
+      "lr": 0.00014093106552454308,
+      "opp_mix": [
+        0.24,
+        0.48,
+        0.29
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.83,
+      "negamax_score": 0.68,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.74,
+      "step": 280576,
+      "pool": 14,
+      "ploss": -0.0218,
+      "vloss": 0.3607,
+      "entropy": 0.526,
+      "lr": 0.0001392237628591703,
+      "opp_mix": [
+        0.23,
+        0.48,
+        0.29
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.83,
+      "negamax_score": 0.67,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.78,
+      "step": 282624,
+      "pool": 14,
+      "ploss": -0.0186,
+      "vloss": 0.4351,
+      "entropy": 0.554,
+      "lr": 0.0001375207282798519,
+      "opp_mix": [
+        0.23,
+        0.48,
+        0.29
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.84,
+      "negamax_score": 0.71,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.8,
+      "step": 284672,
+      "pool": 14,
+      "ploss": -0.0179,
+      "vloss": 0.3054,
+      "entropy": 0.525,
+      "lr": 0.00013582224377880014,
+      "opp_mix": [
+        0.23,
+        0.48,
+        0.29
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.88,
+      "negamax_score": 0.77,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.78,
+      "step": 286720,
+      "pool": 14,
+      "ploss": -0.0246,
+      "vloss": 0.4001,
+      "entropy": 0.536,
+      "lr": 0.00013412859059481555,
+      "opp_mix": [
+        0.23,
+        0.48,
+        0.29
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.96,
+      "random_p2": 0.98,
+      "negamax_win": 0.87,
+      "negamax_score": 0.76,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.82,
+      "step": 288768,
+      "pool": 14,
+      "ploss": -0.0229,
+      "vloss": 0.372,
+      "entropy": 0.535,
+      "lr": 0.00013244004916671836,
+      "opp_mix": [
+        0.23,
+        0.48,
+        0.29
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.86,
+      "negamax_score": 0.74,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.8,
+      "step": 290816,
+      "pool": 14,
+      "ploss": -0.0231,
+      "vloss": 0.3967,
+      "entropy": 0.503,
+      "lr": 0.00013075689908691307,
+      "opp_mix": [
+        0.23,
+        0.48,
+        0.3
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.81,
+      "negamax_score": 0.63,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.7,
+      "step": 292864,
+      "pool": 14,
+      "ploss": -0.0218,
+      "vloss": 0.356,
+      "entropy": 0.522,
+      "lr": 0.00012907941905509291,
+      "opp_mix": [
+        0.22,
+        0.48,
+        0.3
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.83,
+      "negamax_score": 0.67,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.7,
+      "step": 294912,
+      "pool": 14,
+      "ploss": -0.022,
+      "vloss": 0.2872,
+      "entropy": 0.531,
+      "lr": 0.00012740788683209212,
       "opp_mix": [
         0.22,
         0.48,
@@ -196,22 +3031,43 @@
     {
       "random_win": 0.98,
       "random_score": 0.96,
-      "random_p1": 0.98,
-      "random_p2": 0.98,
-      "negamax_win": 0.82,
-      "negamax_score": 0.65,
-      "negamax_p1": 0.82,
-      "negamax_p2": 0.82,
-      "step": 200704,
-      "pool": 10,
-      "ploss": -0.0275,
-      "vloss": 0.4939,
-      "entropy": 0.556,
-      "lr": 9.663992466657189e-05,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.87,
+      "negamax_score": 0.75,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.8,
+      "step": 296960,
+      "pool": 14,
+      "ploss": -0.0219,
+      "vloss": 0.4279,
+      "entropy": 0.506,
+      "lr": 0.00012574257919389348,
       "opp_mix": [
-        0.19,
+        0.22,
         0.48,
-        0.33
+        0.3
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.89,
+      "negamax_score": 0.8,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.88,
+      "step": 299008,
+      "pool": 14,
+      "ploss": -0.0235,
+      "vloss": 0.3607,
+      "entropy": 0.493,
+      "lr": 0.0001240837718857995,
+      "opp_mix": [
+        0.22,
+        0.48,
+        0.3
       ]
     },
     {
@@ -219,16 +3075,646 @@
       "random_score": 0.94,
       "random_p1": 0.98,
       "random_p2": 0.96,
-      "negamax_win": 0.81,
-      "negamax_score": 0.64,
+      "negamax_win": 0.87,
+      "negamax_score": 0.76,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.78,
+      "step": 301056,
+      "pool": 15,
+      "ploss": -0.0226,
+      "vloss": 0.3193,
+      "entropy": 0.511,
+      "lr": 0.00012243173957677376,
+      "opp_mix": [
+        0.22,
+        0.48,
+        0.31
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.77,
+      "negamax_score": 0.56,
       "negamax_p1": 0.9,
+      "negamax_p2": 0.64,
+      "step": 303104,
+      "pool": 15,
+      "ploss": -0.0208,
+      "vloss": 0.3542,
+      "entropy": 0.476,
+      "lr": 0.0001207867558139604,
+      "opp_mix": [
+        0.21,
+        0.48,
+        0.31
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.87,
+      "negamax_score": 0.74,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.86,
+      "step": 305152,
+      "pool": 15,
+      "ploss": -0.0234,
+      "vloss": 0.3511,
+      "entropy": 0.461,
+      "lr": 0.00011914909297738997,
+      "opp_mix": [
+        0.21,
+        0.48,
+        0.31
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.87,
+      "negamax_score": 0.78,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.78,
+      "step": 307200,
+      "pool": 15,
+      "ploss": -0.0196,
+      "vloss": 0.3897,
+      "entropy": 0.482,
+      "lr": 0.0001175190222348778,
+      "opp_mix": [
+        0.21,
+        0.48,
+        0.31
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.84,
+      "negamax_score": 0.72,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.82,
+      "step": 309248,
+      "pool": 15,
+      "ploss": -0.0235,
+      "vloss": 0.3987,
+      "entropy": 0.47,
+      "lr": 0.00011589681349712362,
+      "opp_mix": [
+        0.21,
+        0.48,
+        0.31
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.81,
+      "negamax_score": 0.66,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.68,
+      "step": 311296,
+      "pool": 15,
+      "ploss": -0.0194,
+      "vloss": 0.3816,
+      "entropy": 0.463,
+      "lr": 0.00011428273537301925,
+      "opp_mix": [
+        0.21,
+        0.48,
+        0.31
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.86,
+      "negamax_score": 0.72,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.74,
+      "step": 313344,
+      "pool": 15,
+      "ploss": -0.0207,
+      "vloss": 0.3624,
+      "entropy": 0.482,
+      "lr": 0.00011267705512517144,
+      "opp_mix": [
+        0.21,
+        0.48,
+        0.32
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.83,
+      "negamax_score": 0.71,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.8,
+      "step": 315392,
+      "pool": 15,
+      "ploss": -0.022,
+      "vloss": 0.2857,
+      "entropy": 0.466,
+      "lr": 0.00011108003862564823,
+      "opp_mix": [
+        0.2,
+        0.48,
+        0.32
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.86,
+      "negamax_score": 0.78,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.8,
+      "step": 317440,
+      "pool": 15,
+      "ploss": -0.0164,
+      "vloss": 0.3625,
+      "entropy": 0.443,
+      "lr": 0.00010949195031195495,
+      "opp_mix": [
+        0.2,
+        0.48,
+        0.32
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.83,
+      "negamax_score": 0.7,
+      "negamax_p1": 0.94,
       "negamax_p2": 0.72,
-      "step": 221184,
-      "pool": 11,
-      "ploss": -0.0243,
-      "vloss": 0.4319,
-      "entropy": 0.479,
-      "lr": 7.343043741821662e-05,
+      "step": 319488,
+      "pool": 15,
+      "ploss": -0.0198,
+      "vloss": 0.3011,
+      "entropy": 0.453,
+      "lr": 0.00010791305314324861,
+      "opp_mix": [
+        0.2,
+        0.48,
+        0.32
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.83,
+      "negamax_score": 0.69,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.76,
+      "step": 321536,
+      "pool": 16,
+      "ploss": -0.0237,
+      "vloss": 0.3509,
+      "entropy": 0.435,
+      "lr": 0.00010634360855679588,
+      "opp_mix": [
+        0.2,
+        0.48,
+        0.32
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.98,
+      "random_p2": 0.94,
+      "negamax_win": 0.85,
+      "negamax_score": 0.76,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.72,
+      "step": 323584,
+      "pool": 16,
+      "ploss": -0.0232,
+      "vloss": 0.3809,
+      "entropy": 0.461,
+      "lr": 0.00010478387642468433,
+      "opp_mix": [
+        0.2,
+        0.48,
+        0.32
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.9,
+      "negamax_score": 0.82,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.86,
+      "step": 325632,
+      "pool": 16,
+      "ploss": -0.0189,
+      "vloss": 0.368,
+      "entropy": 0.442,
+      "lr": 0.00010323411501079176,
+      "opp_mix": [
+        0.2,
+        0.48,
+        0.33
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.82,
+      "negamax_score": 0.68,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.78,
+      "step": 327680,
+      "pool": 16,
+      "ploss": -0.0192,
+      "vloss": 0.3753,
+      "entropy": 0.454,
+      "lr": 0.00010169458092802267,
+      "opp_mix": [
+        0.19,
+        0.48,
+        0.33
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.86,
+      "negamax_score": 0.74,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.78,
+      "step": 329728,
+      "pool": 16,
+      "ploss": -0.0197,
+      "vloss": 0.3533,
+      "entropy": 0.446,
+      "lr": 0.00010016552909581749,
+      "opp_mix": [
+        0.19,
+        0.48,
+        0.33
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.83,
+      "negamax_score": 0.69,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.76,
+      "step": 331776,
+      "pool": 16,
+      "ploss": -0.0185,
+      "vloss": 0.3459,
+      "entropy": 0.439,
+      "lr": 9.864721269794256e-05,
+      "opp_mix": [
+        0.19,
+        0.48,
+        0.33
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.82,
+      "negamax_score": 0.67,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.78,
+      "step": 333824,
+      "pool": 16,
+      "ploss": -0.0157,
+      "vloss": 0.3294,
+      "entropy": 0.456,
+      "lr": 9.713988314056744e-05,
+      "opp_mix": [
+        0.19,
+        0.48,
+        0.33
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.96,
+      "random_p2": 0.96,
+      "negamax_win": 0.9,
+      "negamax_score": 0.8,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.84,
+      "step": 335872,
+      "pool": 16,
+      "ploss": -0.0232,
+      "vloss": 0.3569,
+      "entropy": 0.469,
+      "lr": 9.564379001063634e-05,
+      "opp_mix": [
+        0.19,
+        0.48,
+        0.34
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.89,
+      "negamax_score": 0.81,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.88,
+      "step": 337920,
+      "pool": 16,
+      "ploss": -0.0231,
+      "vloss": 0.2641,
+      "entropy": 0.421,
+      "lr": 9.415918103454116e-05,
+      "opp_mix": [
+        0.18,
+        0.48,
+        0.34
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.86,
+      "negamax_score": 0.76,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.82,
+      "step": 339968,
+      "pool": 16,
+      "ploss": -0.0216,
+      "vloss": 0.3538,
+      "entropy": 0.448,
+      "lr": 9.268630203710241e-05,
+      "opp_mix": [
+        0.18,
+        0.48,
+        0.34
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.88,
+      "negamax_score": 0.79,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.82,
+      "step": 342016,
+      "pool": 17,
+      "ploss": -0.0232,
+      "vloss": 0.4304,
+      "entropy": 0.396,
+      "lr": 9.122539690086479e-05,
+      "opp_mix": [
+        0.18,
+        0.48,
+        0.34
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.83,
+      "negamax_score": 0.71,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.78,
+      "step": 344064,
+      "pool": 17,
+      "ploss": -0.0233,
+      "vloss": 0.3176,
+      "entropy": 0.43,
+      "lr": 8.97767075257149e-05,
+      "opp_mix": [
+        0.18,
+        0.48,
+        0.34
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.79,
+      "negamax_score": 0.64,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.72,
+      "step": 346112,
+      "pool": 17,
+      "ploss": -0.0196,
+      "vloss": 0.4313,
+      "entropy": 0.413,
+      "lr": 8.834047378882656e-05,
+      "opp_mix": [
+        0.18,
+        0.48,
+        0.34
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.83,
+      "negamax_score": 0.71,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.8,
+      "step": 348160,
+      "pool": 17,
+      "ploss": -0.018,
+      "vloss": 0.386,
+      "entropy": 0.417,
+      "lr": 8.691693350494166e-05,
+      "opp_mix": [
+        0.18,
+        0.48,
+        0.35
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.86,
+      "negamax_score": 0.77,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.82,
+      "step": 350208,
+      "pool": 17,
+      "ploss": -0.0181,
+      "vloss": 0.3297,
+      "entropy": 0.386,
+      "lr": 8.550632238699238e-05,
+      "opp_mix": [
+        0.17,
+        0.48,
+        0.35
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.85,
+      "negamax_score": 0.75,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.8,
+      "step": 352256,
+      "pool": 17,
+      "ploss": -0.0157,
+      "vloss": 0.3154,
+      "entropy": 0.403,
+      "lr": 8.410887400707086e-05,
+      "opp_mix": [
+        0.17,
+        0.48,
+        0.35
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.86,
+      "negamax_score": 0.74,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.82,
+      "step": 354304,
+      "pool": 17,
+      "ploss": -0.0187,
+      "vloss": 0.3017,
+      "entropy": 0.425,
+      "lr": 8.272481975775441e-05,
+      "opp_mix": [
+        0.17,
+        0.48,
+        0.35
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.84,
+      "negamax_score": 0.72,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.74,
+      "step": 356352,
+      "pool": 17,
+      "ploss": -0.0215,
+      "vloss": 0.3238,
+      "entropy": 0.433,
+      "lr": 8.135438881379055e-05,
+      "opp_mix": [
+        0.17,
+        0.48,
+        0.35
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.86,
+      "negamax_score": 0.75,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.74,
+      "step": 358400,
+      "pool": 17,
+      "ploss": -0.0163,
+      "vloss": 0.263,
+      "entropy": 0.426,
+      "lr": 7.999780809414989e-05,
+      "opp_mix": [
+        0.17,
+        0.48,
+        0.36
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.91,
+      "negamax_score": 0.83,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.86,
+      "step": 360448,
+      "pool": 18,
+      "ploss": -0.0228,
+      "vloss": 0.2799,
+      "entropy": 0.399,
+      "lr": 7.865530222445264e-05,
+      "opp_mix": [
+        0.16,
+        0.48,
+        0.36
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.86,
+      "negamax_score": 0.73,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.74,
+      "step": 362496,
+      "pool": 18,
+      "ploss": -0.0178,
+      "vloss": 0.2764,
+      "entropy": 0.412,
+      "lr": 7.732709349977414e-05,
       "opp_mix": [
         0.16,
         0.48,
@@ -240,16 +3726,331 @@
       "random_score": 0.98,
       "random_p1": 1.0,
       "random_p2": 0.98,
-      "negamax_win": 0.83,
-      "negamax_score": 0.67,
-      "negamax_p1": 0.86,
+      "negamax_win": 0.86,
+      "negamax_score": 0.75,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.82,
+      "step": 364544,
+      "pool": 18,
+      "ploss": -0.0194,
+      "vloss": 0.3705,
+      "entropy": 0.409,
+      "lr": 7.601340184783724e-05,
+      "opp_mix": [
+        0.16,
+        0.48,
+        0.36
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.85,
+      "negamax_score": 0.72,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.76,
+      "step": 366592,
+      "pool": 18,
+      "ploss": -0.0202,
+      "vloss": 0.3254,
+      "entropy": 0.396,
+      "lr": 7.471444479259578e-05,
+      "opp_mix": [
+        0.16,
+        0.48,
+        0.36
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.86,
+      "negamax_score": 0.74,
+      "negamax_p1": 0.92,
       "negamax_p2": 0.8,
-      "step": 241664,
-      "pool": 12,
-      "ploss": -0.0217,
-      "vloss": 0.4435,
-      "entropy": 0.43,
-      "lr": 5.4416636396326725e-05,
+      "step": 368640,
+      "pool": 18,
+      "ploss": -0.0216,
+      "vloss": 0.4089,
+      "entropy": 0.383,
+      "lr": 7.343043741821662e-05,
+      "opp_mix": [
+        0.16,
+        0.48,
+        0.36
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.87,
+      "negamax_score": 0.75,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.78,
+      "step": 370688,
+      "pool": 18,
+      "ploss": -0.018,
+      "vloss": 0.2615,
+      "entropy": 0.376,
+      "lr": 7.216159233346585e-05,
+      "opp_mix": [
+        0.16,
+        0.48,
+        0.37
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.88,
+      "negamax_score": 0.76,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.84,
+      "step": 372736,
+      "pool": 18,
+      "ploss": -0.0197,
+      "vloss": 0.2865,
+      "entropy": 0.385,
+      "lr": 7.0908119636504e-05,
+      "opp_mix": [
+        0.15,
+        0.48,
+        0.37
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.88,
+      "negamax_score": 0.76,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.82,
+      "step": 374784,
+      "pool": 18,
+      "ploss": -0.0194,
+      "vloss": 0.4198,
+      "entropy": 0.403,
+      "lr": 6.96702268800979e-05,
+      "opp_mix": [
+        0.15,
+        0.48,
+        0.37
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.86,
+      "negamax_score": 0.74,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.82,
+      "step": 376832,
+      "pool": 18,
+      "ploss": -0.0175,
+      "vloss": 0.4205,
+      "entropy": 0.398,
+      "lr": 6.844811903725361e-05,
+      "opp_mix": [
+        0.15,
+        0.48,
+        0.37
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.91,
+      "negamax_score": 0.83,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.92,
+      "step": 378880,
+      "pool": 18,
+      "ploss": -0.0183,
+      "vloss": 0.2828,
+      "entropy": 0.398,
+      "lr": 6.724199846727639e-05,
+      "opp_mix": [
+        0.15,
+        0.48,
+        0.37
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.89,
+      "negamax_score": 0.8,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.88,
+      "step": 380928,
+      "pool": 19,
+      "ploss": -0.0193,
+      "vloss": 0.3476,
+      "entropy": 0.406,
+      "lr": 6.605206488226374e-05,
+      "opp_mix": [
+        0.15,
+        0.48,
+        0.37
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.92,
+      "negamax_score": 0.87,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.92,
+      "step": 382976,
+      "pool": 19,
+      "ploss": -0.0212,
+      "vloss": 0.3384,
+      "entropy": 0.376,
+      "lr": 6.487851531403658e-05,
+      "opp_mix": [
+        0.15,
+        0.48,
+        0.38
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.92,
+      "negamax_score": 0.85,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.88,
+      "step": 385024,
+      "pool": 19,
+      "ploss": -0.0175,
+      "vloss": 0.3746,
+      "entropy": 0.403,
+      "lr": 6.372154408151417e-05,
+      "opp_mix": [
+        0.14,
+        0.48,
+        0.38
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.86,
+      "negamax_score": 0.75,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.78,
+      "step": 387072,
+      "pool": 19,
+      "ploss": -0.0192,
+      "vloss": 0.4125,
+      "entropy": 0.401,
+      "lr": 6.258134275853865e-05,
+      "opp_mix": [
+        0.14,
+        0.48,
+        0.38
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.84,
+      "negamax_score": 0.71,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.78,
+      "step": 389120,
+      "pool": 19,
+      "ploss": -0.0174,
+      "vloss": 0.3538,
+      "entropy": 0.411,
+      "lr": 6.145810014215358e-05,
+      "opp_mix": [
+        0.14,
+        0.48,
+        0.38
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.92,
+      "negamax_score": 0.85,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.9,
+      "step": 391168,
+      "pool": 19,
+      "ploss": -0.0189,
+      "vloss": 0.3647,
+      "entropy": 0.384,
+      "lr": 6.0352002221342455e-05,
+      "opp_mix": [
+        0.14,
+        0.48,
+        0.38
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 0.96,
+      "random_p2": 0.96,
+      "negamax_win": 0.87,
+      "negamax_score": 0.78,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.84,
+      "step": 393216,
+      "pool": 19,
+      "ploss": -0.0206,
+      "vloss": 0.306,
+      "entropy": 0.392,
+      "lr": 5.9263232146232554e-05,
+      "opp_mix": [
+        0.14,
+        0.48,
+        0.39
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.88,
+      "negamax_score": 0.78,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.82,
+      "step": 395264,
+      "pool": 19,
+      "ploss": -0.0199,
+      "vloss": 0.452,
+      "entropy": 0.388,
+      "lr": 5.819197019776816e-05,
       "opp_mix": [
         0.13,
         0.48,
@@ -261,16 +4062,352 @@
       "random_score": 1.0,
       "random_p1": 1.0,
       "random_p2": 1.0,
-      "negamax_win": 0.86,
+      "negamax_win": 0.84,
       "negamax_score": 0.74,
-      "negamax_p1": 0.84,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.78,
+      "step": 397312,
+      "pool": 19,
+      "ploss": -0.021,
+      "vloss": 0.3831,
+      "entropy": 0.398,
+      "lr": 5.7138393757859605e-05,
+      "opp_mix": [
+        0.13,
+        0.48,
+        0.39
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.93,
+      "negamax_score": 0.88,
+      "negamax_p1": 0.98,
       "negamax_p2": 0.88,
-      "step": 260096,
-      "pool": 13,
-      "ploss": -0.0208,
-      "vloss": 0.3787,
-      "entropy": 0.451,
-      "lr": 4.161622455171762e-05,
+      "step": 399360,
+      "pool": 19,
+      "ploss": -0.0161,
+      "vloss": 0.3313,
+      "entropy": 0.356,
+      "lr": 5.6102677280011634e-05,
+      "opp_mix": [
+        0.13,
+        0.48,
+        0.39
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.89,
+      "negamax_score": 0.8,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.84,
+      "step": 401408,
+      "pool": 20,
+      "ploss": -0.0198,
+      "vloss": 0.3823,
+      "entropy": 0.349,
+      "lr": 5.508499226043725e-05,
+      "opp_mix": [
+        0.13,
+        0.48,
+        0.39
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.89,
+      "negamax_score": 0.78,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.84,
+      "step": 403456,
+      "pool": 20,
+      "ploss": -0.0204,
+      "vloss": 0.2754,
+      "entropy": 0.332,
+      "lr": 5.4085507209661005e-05,
+      "opp_mix": [
+        0.13,
+        0.48,
+        0.39
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.9,
+      "negamax_score": 0.81,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.86,
+      "step": 405504,
+      "pool": 20,
+      "ploss": -0.0169,
+      "vloss": 0.4033,
+      "entropy": 0.355,
+      "lr": 5.310438762461643e-05,
+      "opp_mix": [
+        0.13,
+        0.48,
+        0.4
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.87,
+      "negamax_score": 0.8,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.82,
+      "step": 407552,
+      "pool": 20,
+      "ploss": -0.0148,
+      "vloss": 0.3231,
+      "entropy": 0.345,
+      "lr": 5.2141795961242935e-05,
+      "opp_mix": [
+        0.12,
+        0.48,
+        0.4
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.81,
+      "negamax_score": 0.63,
+      "negamax_p1": 0.88,
+      "negamax_p2": 0.74,
+      "step": 409600,
+      "pool": 20,
+      "ploss": -0.0174,
+      "vloss": 0.3227,
+      "entropy": 0.334,
+      "lr": 5.1197891607585944e-05,
+      "opp_mix": [
+        0.12,
+        0.48,
+        0.4
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.86,
+      "negamax_score": 0.75,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.8,
+      "step": 411648,
+      "pool": 20,
+      "ploss": -0.0155,
+      "vloss": 0.2326,
+      "entropy": 0.317,
+      "lr": 5.0272830857404845e-05,
+      "opp_mix": [
+        0.12,
+        0.48,
+        0.4
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.95,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.89,
+      "negamax_score": 0.78,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.88,
+      "step": 413696,
+      "pool": 20,
+      "ploss": -0.0174,
+      "vloss": 0.3158,
+      "entropy": 0.32,
+      "lr": 4.936676688429391e-05,
+      "opp_mix": [
+        0.12,
+        0.48,
+        0.4
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.9,
+      "negamax_score": 0.81,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.88,
+      "step": 415744,
+      "pool": 20,
+      "ploss": -0.0187,
+      "vloss": 0.33,
+      "entropy": 0.329,
+      "lr": 4.8479849716319104e-05,
+      "opp_mix": [
+        0.12,
+        0.48,
+        0.4
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.92,
+      "negamax_score": 0.84,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.92,
+      "step": 417792,
+      "pool": 20,
+      "ploss": -0.0141,
+      "vloss": 0.3233,
+      "entropy": 0.313,
+      "lr": 4.7612226211176416e-05,
+      "opp_mix": [
+        0.11,
+        0.48,
+        0.41
+      ]
+    },
+    {
+      "random_win": 0.95,
+      "random_score": 0.9,
+      "random_p1": 0.94,
+      "random_p2": 0.96,
+      "negamax_win": 0.85,
+      "negamax_score": 0.72,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.76,
+      "step": 419840,
+      "pool": 20,
+      "ploss": -0.0202,
+      "vloss": 0.2887,
+      "entropy": 0.337,
+      "lr": 4.6764040031874586e-05,
+      "opp_mix": [
+        0.11,
+        0.48,
+        0.41
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.89,
+      "negamax_score": 0.79,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.86,
+      "step": 421888,
+      "pool": 20,
+      "ploss": -0.0197,
+      "vloss": 0.3583,
+      "entropy": 0.324,
+      "lr": 4.593543162294719e-05,
+      "opp_mix": [
+        0.11,
+        0.48,
+        0.41
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.92,
+      "negamax_score": 0.85,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.9,
+      "step": 423936,
+      "pool": 20,
+      "ploss": -0.0177,
+      "vloss": 0.3259,
+      "entropy": 0.294,
+      "lr": 4.512653818719762e-05,
+      "opp_mix": [
+        0.11,
+        0.48,
+        0.41
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.85,
+      "negamax_score": 0.73,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.78,
+      "step": 425984,
+      "pool": 20,
+      "ploss": -0.0172,
+      "vloss": 0.3544,
+      "entropy": 0.323,
+      "lr": 4.43374936629805e-05,
+      "opp_mix": [
+        0.11,
+        0.48,
+        0.41
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.88,
+      "negamax_score": 0.77,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.8,
+      "step": 428032,
+      "pool": 20,
+      "ploss": -0.0155,
+      "vloss": 0.273,
+      "entropy": 0.307,
+      "lr": 4.356842870202407e-05,
+      "opp_mix": [
+        0.11,
+        0.48,
+        0.42
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 0.98,
+      "random_p2": 1.0,
+      "negamax_win": 0.86,
+      "negamax_score": 0.73,
+      "negamax_p1": 0.86,
+      "negamax_p2": 0.86,
+      "step": 430080,
+      "pool": 20,
+      "ploss": -0.0172,
+      "vloss": 0.2981,
+      "entropy": 0.318,
+      "lr": 4.281947064779659e-05,
       "opp_mix": [
         0.1,
         0.48,
@@ -282,16 +4419,352 @@
       "random_score": 1.0,
       "random_p1": 1.0,
       "random_p2": 1.0,
-      "negamax_win": 0.85,
-      "negamax_score": 0.7,
-      "negamax_p1": 0.92,
-      "negamax_p2": 0.78,
-      "step": 280576,
-      "pool": 14,
+      "negamax_win": 0.9,
+      "negamax_score": 0.84,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.9,
+      "step": 432128,
+      "pool": 20,
+      "ploss": -0.015,
+      "vloss": 0.2926,
+      "entropy": 0.326,
+      "lr": 4.209074351442034e-05,
+      "opp_mix": [
+        0.1,
+        0.48,
+        0.42
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.92,
+      "negamax_score": 0.84,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.88,
+      "step": 434176,
+      "pool": 20,
+      "ploss": -0.0166,
+      "vloss": 0.2809,
+      "entropy": 0.317,
+      "lr": 4.1382367966137355e-05,
+      "opp_mix": [
+        0.1,
+        0.48,
+        0.42
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.9,
+      "negamax_score": 0.84,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.84,
+      "step": 436224,
+      "pool": 20,
       "ploss": -0.0185,
-      "vloss": 0.3803,
-      "entropy": 0.374,
-      "lr": 3.2783174467509634e-05,
+      "vloss": 0.3023,
+      "entropy": 0.322,
+      "lr": 4.069446129732934e-05,
+      "opp_mix": [
+        0.1,
+        0.48,
+        0.42
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.91,
+      "negamax_score": 0.86,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.86,
+      "step": 438272,
+      "pool": 20,
+      "ploss": -0.0167,
+      "vloss": 0.3332,
+      "entropy": 0.327,
+      "lr": 4.00271374130959e-05,
+      "opp_mix": [
+        0.1,
+        0.48,
+        0.42
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 0.98,
+      "random_p2": 1.0,
+      "negamax_win": 0.9,
+      "negamax_score": 0.85,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.88,
+      "step": 440320,
+      "pool": 20,
+      "ploss": -0.0163,
+      "vloss": 0.2861,
+      "entropy": 0.301,
+      "lr": 3.9380506810393985e-05,
+      "opp_mix": [
+        0.1,
+        0.48,
+        0.43
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.88,
+      "negamax_score": 0.76,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.78,
+      "step": 442368,
+      "pool": 20,
+      "ploss": -0.0156,
+      "vloss": 0.2994,
+      "entropy": 0.309,
+      "lr": 3.8754676559741324e-05,
+      "opp_mix": [
+        0.09,
+        0.48,
+        0.43
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.96,
+      "random_p2": 1.0,
+      "negamax_win": 0.92,
+      "negamax_score": 0.86,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.86,
+      "step": 444416,
+      "pool": 20,
+      "ploss": -0.0134,
+      "vloss": 0.2694,
+      "entropy": 0.316,
+      "lr": 3.814975028748775e-05,
+      "opp_mix": [
+        0.09,
+        0.48,
+        0.43
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.98,
+      "random_p2": 0.98,
+      "negamax_win": 0.88,
+      "negamax_score": 0.77,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.84,
+      "step": 446464,
+      "pool": 20,
+      "ploss": -0.0168,
+      "vloss": 0.3012,
+      "entropy": 0.309,
+      "lr": 3.756582815865619e-05,
+      "opp_mix": [
+        0.09,
+        0.48,
+        0.43
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.88,
+      "negamax_score": 0.8,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.86,
+      "step": 448512,
+      "pool": 20,
+      "ploss": -0.0163,
+      "vloss": 0.5304,
+      "entropy": 0.313,
+      "lr": 3.700300686035746e-05,
+      "opp_mix": [
+        0.09,
+        0.48,
+        0.43
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.92,
+      "negamax_score": 0.88,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.88,
+      "step": 450560,
+      "pool": 20,
+      "ploss": -0.0149,
+      "vloss": 0.2587,
+      "entropy": 0.331,
+      "lr": 3.6461379585780345e-05,
+      "opp_mix": [
+        0.09,
+        0.48,
+        0.44
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.92,
+      "negamax_score": 0.88,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.86,
+      "step": 452608,
+      "pool": 20,
+      "ploss": -0.0167,
+      "vloss": 0.2462,
+      "entropy": 0.308,
+      "lr": 3.594103601876053e-05,
+      "opp_mix": [
+        0.08,
+        0.48,
+        0.44
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.93,
+      "negamax_score": 0.87,
+      "negamax_p1": 0.92,
+      "negamax_p2": 0.94,
+      "step": 454656,
+      "pool": 20,
+      "ploss": -0.0146,
+      "vloss": 0.314,
+      "entropy": 0.299,
+      "lr": 3.5442062318930626e-05,
+      "opp_mix": [
+        0.08,
+        0.48,
+        0.44
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.86,
+      "negamax_score": 0.72,
+      "negamax_p1": 0.9,
+      "negamax_p2": 0.82,
+      "step": 456704,
+      "pool": 20,
+      "ploss": -0.0168,
+      "vloss": 0.2656,
+      "entropy": 0.295,
+      "lr": 3.496454110745364e-05,
+      "opp_mix": [
+        0.08,
+        0.48,
+        0.44
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.89,
+      "negamax_score": 0.8,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.84,
+      "step": 458752,
+      "pool": 20,
+      "ploss": -0.0138,
+      "vloss": 0.3356,
+      "entropy": 0.288,
+      "lr": 3.450855145334229e-05,
+      "opp_mix": [
+        0.08,
+        0.48,
+        0.44
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 0.96,
+      "random_p2": 1.0,
+      "negamax_win": 0.89,
+      "negamax_score": 0.8,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.84,
+      "step": 460800,
+      "pool": 20,
+      "ploss": -0.0151,
+      "vloss": 0.3676,
+      "entropy": 0.31,
+      "lr": 3.407416886036674e-05,
+      "opp_mix": [
+        0.08,
+        0.48,
+        0.44
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.91,
+      "negamax_score": 0.85,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.84,
+      "step": 462848,
+      "pool": 20,
+      "ploss": -0.0163,
+      "vloss": 0.2777,
+      "entropy": 0.315,
+      "lr": 3.366146525455235e-05,
+      "opp_mix": [
+        0.08,
+        0.48,
+        0.45
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 1.0,
+      "random_p2": 0.94,
+      "negamax_win": 0.93,
+      "negamax_score": 0.87,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.88,
+      "step": 464896,
+      "pool": 20,
+      "ploss": -0.0141,
+      "vloss": 0.3914,
+      "entropy": 0.292,
+      "lr": 3.3270508972270144e-05,
       "opp_mix": [
         0.07,
         0.48,
@@ -301,23 +4774,1850 @@
     {
       "random_win": 0.98,
       "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.89,
+      "negamax_score": 0.79,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.82,
+      "step": 466944,
+      "pool": 20,
+      "ploss": -0.0159,
+      "vloss": 0.32,
+      "entropy": 0.287,
+      "lr": 3.290136474892146e-05,
+      "opp_mix": [
+        0.07,
+        0.48,
+        0.45
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 0.98,
+      "random_p2": 1.0,
+      "negamax_win": 0.93,
+      "negamax_score": 0.9,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.88,
+      "step": 468992,
+      "pool": 20,
+      "ploss": -0.0138,
+      "vloss": 0.2415,
+      "entropy": 0.314,
+      "lr": 3.2554093708218926e-05,
+      "opp_mix": [
+        0.07,
+        0.48,
+        0.45
+      ]
+    },
+    {
+      "random_win": 0.96,
+      "random_score": 0.92,
+      "random_p1": 1.0,
+      "random_p2": 0.92,
+      "negamax_win": 0.92,
+      "negamax_score": 0.85,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.88,
+      "step": 471040,
+      "pool": 20,
+      "ploss": -0.016,
+      "vloss": 0.2668,
+      "entropy": 0.291,
+      "lr": 3.2228753352065494e-05,
+      "opp_mix": [
+        0.07,
+        0.48,
+        0.45
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.93,
+      "negamax_score": 0.9,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.9,
+      "step": 473088,
+      "pool": 20,
+      "ploss": -0.0131,
+      "vloss": 0.2898,
+      "entropy": 0.292,
+      "lr": 3.192539755103308e-05,
+      "opp_mix": [
+        0.07,
+        0.48,
+        0.45
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.94,
+      "negamax_score": 0.89,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.92,
+      "step": 475136,
+      "pool": 20,
+      "ploss": -0.0146,
+      "vloss": 0.3469,
+      "entropy": 0.304,
+      "lr": 3.164407653544259e-05,
+      "opp_mix": [
+        0.07,
+        0.48,
+        0.46
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.96,
+      "negamax_score": 0.94,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.96,
+      "step": 477184,
+      "pool": 20,
+      "ploss": -0.0171,
+      "vloss": 0.3133,
+      "entropy": 0.287,
+      "lr": 3.138483688704673e-05,
+      "opp_mix": [
+        0.06,
+        0.48,
+        0.46
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.91,
+      "negamax_score": 0.88,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.86,
+      "step": 479232,
+      "pool": 20,
+      "ploss": -0.0139,
+      "vloss": 0.3325,
+      "entropy": 0.287,
+      "lr": 3.1147721531316796e-05,
+      "opp_mix": [
+        0.06,
+        0.48,
+        0.46
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.92,
+      "negamax_score": 0.86,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.9,
+      "step": 481280,
+      "pool": 20,
+      "ploss": -0.0151,
+      "vloss": 0.3029,
+      "entropy": 0.317,
+      "lr": 3.093276973033506e-05,
+      "opp_mix": [
+        0.06,
+        0.48,
+        0.46
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.94,
+      "negamax_score": 0.89,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.94,
+      "step": 483328,
+      "pool": 20,
+      "ploss": -0.0165,
+      "vloss": 0.2564,
+      "entropy": 0.281,
+      "lr": 3.074001707629364e-05,
+      "opp_mix": [
+        0.06,
+        0.48,
+        0.46
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.91,
+      "negamax_score": 0.85,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.86,
+      "step": 485376,
+      "pool": 20,
+      "ploss": -0.0135,
+      "vloss": 0.2983,
+      "entropy": 0.298,
+      "lr": 3.056949548560105e-05,
+      "opp_mix": [
+        0.06,
+        0.48,
+        0.47
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.91,
+      "negamax_score": 0.82,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.88,
+      "step": 487424,
+      "pool": 20,
+      "ploss": -0.0141,
+      "vloss": 0.2875,
+      "entropy": 0.287,
+      "lr": 3.0421233193597413e-05,
+      "opp_mix": [
+        0.05,
+        0.48,
+        0.47
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
+      "random_p1": 1.0,
+      "random_p2": 0.96,
+      "negamax_win": 0.94,
+      "negamax_score": 0.88,
+      "negamax_p1": 1.0,
+      "negamax_p2": 0.88,
+      "step": 489472,
+      "pool": 20,
+      "ploss": -0.0123,
+      "vloss": 0.179,
+      "entropy": 0.276,
+      "lr": 3.029525474987923e-05,
+      "opp_mix": [
+        0.05,
+        0.48,
+        0.47
+      ]
+    },
+    {
+      "random_win": 0.98,
+      "random_score": 0.96,
       "random_p1": 0.98,
       "random_p2": 0.98,
+      "negamax_win": 0.9,
+      "negamax_score": 0.83,
+      "negamax_p1": 0.98,
+      "negamax_p2": 0.82,
+      "step": 491520,
+      "pool": 20,
+      "ploss": -0.0127,
+      "vloss": 0.3917,
+      "entropy": 0.293,
+      "lr": 3.0191581014234367e-05,
+      "opp_mix": [
+        0.05,
+        0.48,
+        0.47
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
+      "negamax_win": 0.94,
+      "negamax_score": 0.89,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.94,
+      "step": 493568,
+      "pool": 20,
+      "ploss": -0.0119,
+      "vloss": 0.2762,
+      "entropy": 0.267,
+      "lr": 3.011022915318807e-05,
+      "opp_mix": [
+        0.05,
+        0.48,
+        0.47
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.9,
+      "negamax_score": 0.81,
+      "negamax_p1": 0.94,
+      "negamax_p2": 0.86,
+      "step": 495616,
+      "pool": 20,
+      "ploss": -0.0153,
+      "vloss": 0.2855,
+      "entropy": 0.263,
+      "lr": 3.0051212637160464e-05,
+      "opp_mix": [
+        0.05,
+        0.48,
+        0.47
+      ]
+    },
+    {
+      "random_win": 1.0,
+      "random_score": 1.0,
+      "random_p1": 1.0,
+      "random_p2": 1.0,
       "negamax_win": 0.91,
       "negamax_score": 0.84,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.86,
+      "step": 497664,
+      "pool": 20,
+      "ploss": -0.0134,
+      "vloss": 0.2756,
+      "entropy": 0.273,
+      "lr": 3.0014541238236105e-05,
+      "opp_mix": [
+        0.05,
+        0.48,
+        0.48
+      ]
+    },
+    {
+      "random_win": 0.97,
+      "random_score": 0.94,
+      "random_p1": 0.98,
+      "random_p2": 0.96,
+      "negamax_win": 0.89,
+      "negamax_score": 0.8,
       "negamax_p1": 0.98,
-      "negamax_p2": 0.84,
-      "step": 301056,
-      "pool": 15,
-      "ploss": -0.019,
-      "vloss": 0.3965,
-      "entropy": 0.38,
+      "negamax_p2": 0.8,
+      "step": 499712,
+      "pool": 20,
+      "ploss": -0.0157,
+      "vloss": 0.2455,
+      "entropy": 0.281,
+      "lr": 3.0000221028545893e-05,
+      "opp_mix": [
+        0.04,
+        0.48,
+        0.48
+      ]
+    },
+    {
+      "random_win": 0.99,
+      "random_score": 0.98,
+      "random_p1": 1.0,
+      "random_p2": 0.98,
+      "negamax_win": 0.92,
+      "negamax_score": 0.86,
+      "negamax_p1": 0.96,
+      "negamax_p2": 0.88,
+      "step": 501760,
+      "pool": 20,
+      "ploss": -0.0164,
+      "vloss": 0.338,
+      "entropy": 0.287,
       "lr": 2.9999999999999997e-05,
       "opp_mix": [
         0.04,
         0.48,
         0.48
       ]
+    },
+    {
+      "step": 2048,
+      "ploss": 0.0221,
+      "vloss": 1.8958,
+      "entropy": 1.751
+    },
+    {
+      "step": 4096,
+      "ploss": -0.0058,
+      "vloss": 0.9669,
+      "entropy": 1.686
+    },
+    {
+      "step": 6144,
+      "ploss": -0.009,
+      "vloss": 0.989,
+      "entropy": 1.724
+    },
+    {
+      "step": 8192,
+      "ploss": -0.0089,
+      "vloss": 0.9854,
+      "entropy": 1.736
+    },
+    {
+      "step": 10240,
+      "ploss": -0.0083,
+      "vloss": 0.8666,
+      "entropy": 1.717
+    },
+    {
+      "step": 12288,
+      "ploss": -0.0033,
+      "vloss": 1.0746,
+      "entropy": 1.697
+    },
+    {
+      "step": 14336,
+      "ploss": -0.0122,
+      "vloss": 0.8804,
+      "entropy": 1.57
+    },
+    {
+      "step": 16384,
+      "ploss": -0.0165,
+      "vloss": 0.8848,
+      "entropy": 1.448
+    },
+    {
+      "step": 18432,
+      "ploss": -0.0189,
+      "vloss": 0.6929,
+      "entropy": 1.348
+    },
+    {
+      "step": 20480,
+      "ploss": -0.0157,
+      "vloss": 0.7318,
+      "entropy": 1.293
+    },
+    {
+      "step": 22528,
+      "ploss": -0.0182,
+      "vloss": 0.7646,
+      "entropy": 1.28
+    },
+    {
+      "step": 24576,
+      "ploss": -0.0205,
+      "vloss": 0.6932,
+      "entropy": 1.26
+    },
+    {
+      "step": 26624,
+      "ploss": -0.0174,
+      "vloss": 0.7169,
+      "entropy": 1.226
+    },
+    {
+      "step": 28672,
+      "ploss": -0.0167,
+      "vloss": 0.7402,
+      "entropy": 1.139
+    },
+    {
+      "step": 30720,
+      "ploss": -0.0127,
+      "vloss": 0.6125,
+      "entropy": 1.034
+    },
+    {
+      "step": 32768,
+      "ploss": -0.0189,
+      "vloss": 0.6505,
+      "entropy": 0.997
+    },
+    {
+      "step": 34816,
+      "ploss": -0.0134,
+      "vloss": 0.666,
+      "entropy": 0.944
+    },
+    {
+      "step": 36864,
+      "ploss": -0.0183,
+      "vloss": 0.541,
+      "entropy": 0.882
+    },
+    {
+      "step": 38912,
+      "ploss": -0.0128,
+      "vloss": 0.5853,
+      "entropy": 0.842
+    },
+    {
+      "step": 40960,
+      "ploss": -0.0145,
+      "vloss": 0.5964,
+      "entropy": 0.85
+    },
+    {
+      "step": 43008,
+      "ploss": -0.0197,
+      "vloss": 0.5779,
+      "entropy": 0.791
+    },
+    {
+      "step": 45056,
+      "ploss": -0.0146,
+      "vloss": 0.5562,
+      "entropy": 0.815
+    },
+    {
+      "step": 47104,
+      "ploss": -0.0116,
+      "vloss": 0.6153,
+      "entropy": 0.844
+    },
+    {
+      "step": 49152,
+      "ploss": -0.0164,
+      "vloss": 0.524,
+      "entropy": 0.887
+    },
+    {
+      "step": 51200,
+      "ploss": -0.0152,
+      "vloss": 0.5327,
+      "entropy": 0.856
+    },
+    {
+      "step": 53248,
+      "ploss": -0.0104,
+      "vloss": 0.5598,
+      "entropy": 0.799
+    },
+    {
+      "step": 55296,
+      "ploss": -0.0134,
+      "vloss": 0.503,
+      "entropy": 0.857
+    },
+    {
+      "step": 57344,
+      "ploss": -0.0078,
+      "vloss": 0.5916,
+      "entropy": 0.782
+    },
+    {
+      "step": 59392,
+      "ploss": -0.0196,
+      "vloss": 0.5558,
+      "entropy": 0.774
+    },
+    {
+      "step": 61440,
+      "ploss": -0.0142,
+      "vloss": 0.5484,
+      "entropy": 0.787
+    },
+    {
+      "step": 63488,
+      "ploss": -0.01,
+      "vloss": 0.5096,
+      "entropy": 0.753
+    },
+    {
+      "step": 65536,
+      "ploss": -0.022,
+      "vloss": 0.4949,
+      "entropy": 0.754
+    },
+    {
+      "step": 67584,
+      "ploss": -0.0095,
+      "vloss": 0.4898,
+      "entropy": 0.789
+    },
+    {
+      "step": 69632,
+      "ploss": -0.0203,
+      "vloss": 0.5828,
+      "entropy": 0.844
+    },
+    {
+      "step": 71680,
+      "ploss": -0.0261,
+      "vloss": 0.4855,
+      "entropy": 0.818
+    },
+    {
+      "step": 73728,
+      "ploss": -0.015,
+      "vloss": 0.5718,
+      "entropy": 0.87
+    },
+    {
+      "step": 75776,
+      "ploss": -0.0177,
+      "vloss": 0.5192,
+      "entropy": 0.837
+    },
+    {
+      "step": 77824,
+      "ploss": -0.0206,
+      "vloss": 0.5516,
+      "entropy": 0.802
+    },
+    {
+      "step": 79872,
+      "ploss": -0.0165,
+      "vloss": 0.5189,
+      "entropy": 0.865
+    },
+    {
+      "step": 81920,
+      "ploss": -0.0201,
+      "vloss": 0.531,
+      "entropy": 0.825
+    },
+    {
+      "step": 83968,
+      "ploss": -0.0162,
+      "vloss": 0.5391,
+      "entropy": 0.766
+    },
+    {
+      "step": 86016,
+      "ploss": -0.0238,
+      "vloss": 0.4875,
+      "entropy": 0.853
+    },
+    {
+      "step": 88064,
+      "ploss": -0.0188,
+      "vloss": 0.4778,
+      "entropy": 0.745
+    },
+    {
+      "step": 90112,
+      "ploss": -0.0191,
+      "vloss": 0.5616,
+      "entropy": 0.857
+    },
+    {
+      "step": 92160,
+      "ploss": -0.0226,
+      "vloss": 0.4853,
+      "entropy": 0.882
+    },
+    {
+      "step": 94208,
+      "ploss": -0.0183,
+      "vloss": 0.5236,
+      "entropy": 0.735
+    },
+    {
+      "step": 96256,
+      "ploss": -0.0222,
+      "vloss": 0.4378,
+      "entropy": 0.759
+    },
+    {
+      "step": 98304,
+      "ploss": -0.0161,
+      "vloss": 0.4499,
+      "entropy": 0.734
+    },
+    {
+      "step": 100352,
+      "ploss": -0.0207,
+      "vloss": 0.4858,
+      "entropy": 0.711
+    },
+    {
+      "step": 102400,
+      "ploss": -0.0182,
+      "vloss": 0.4617,
+      "entropy": 0.733
+    },
+    {
+      "step": 104448,
+      "ploss": -0.0223,
+      "vloss": 0.4799,
+      "entropy": 0.792
+    },
+    {
+      "step": 106496,
+      "ploss": -0.0261,
+      "vloss": 0.4859,
+      "entropy": 0.821
+    },
+    {
+      "step": 108544,
+      "ploss": -0.0232,
+      "vloss": 0.5236,
+      "entropy": 0.837
+    },
+    {
+      "step": 110592,
+      "ploss": -0.0269,
+      "vloss": 0.5215,
+      "entropy": 0.849
+    },
+    {
+      "step": 112640,
+      "ploss": -0.0233,
+      "vloss": 0.4398,
+      "entropy": 0.842
+    },
+    {
+      "step": 114688,
+      "ploss": -0.0239,
+      "vloss": 0.5197,
+      "entropy": 0.866
+    },
+    {
+      "step": 116736,
+      "ploss": -0.0243,
+      "vloss": 0.5328,
+      "entropy": 0.792
+    },
+    {
+      "step": 118784,
+      "ploss": -0.0222,
+      "vloss": 0.5237,
+      "entropy": 0.756
+    },
+    {
+      "step": 120832,
+      "ploss": -0.0279,
+      "vloss": 0.4552,
+      "entropy": 0.692
+    },
+    {
+      "step": 122880,
+      "ploss": -0.0157,
+      "vloss": 0.456,
+      "entropy": 0.675
+    },
+    {
+      "step": 124928,
+      "ploss": -0.0065,
+      "vloss": 0.5381,
+      "entropy": 0.637
+    },
+    {
+      "step": 126976,
+      "ploss": -0.0144,
+      "vloss": 0.4561,
+      "entropy": 0.665
+    },
+    {
+      "step": 129024,
+      "ploss": -0.0262,
+      "vloss": 0.4772,
+      "entropy": 0.676
+    },
+    {
+      "step": 131072,
+      "ploss": -0.0241,
+      "vloss": 0.4716,
+      "entropy": 0.711
+    },
+    {
+      "step": 133120,
+      "ploss": -0.0146,
+      "vloss": 0.4832,
+      "entropy": 0.729
+    },
+    {
+      "step": 135168,
+      "ploss": -0.0198,
+      "vloss": 0.4595,
+      "entropy": 0.704
+    },
+    {
+      "step": 137216,
+      "ploss": -0.0156,
+      "vloss": 0.5575,
+      "entropy": 0.693
+    },
+    {
+      "step": 139264,
+      "ploss": -0.0199,
+      "vloss": 0.4825,
+      "entropy": 0.678
+    },
+    {
+      "step": 141312,
+      "ploss": -0.0212,
+      "vloss": 0.5535,
+      "entropy": 0.736
+    },
+    {
+      "step": 143360,
+      "ploss": -0.0181,
+      "vloss": 0.4545,
+      "entropy": 0.711
+    },
+    {
+      "step": 145408,
+      "ploss": -0.02,
+      "vloss": 0.4885,
+      "entropy": 0.747
+    },
+    {
+      "step": 147456,
+      "ploss": -0.0207,
+      "vloss": 0.524,
+      "entropy": 0.735
+    },
+    {
+      "step": 149504,
+      "ploss": -0.0197,
+      "vloss": 0.4515,
+      "entropy": 0.77
+    },
+    {
+      "step": 151552,
+      "ploss": -0.021,
+      "vloss": 0.4848,
+      "entropy": 0.732
+    },
+    {
+      "step": 153600,
+      "ploss": -0.0183,
+      "vloss": 0.5054,
+      "entropy": 0.702
+    },
+    {
+      "step": 155648,
+      "ploss": -0.0165,
+      "vloss": 0.442,
+      "entropy": 0.699
+    },
+    {
+      "step": 157696,
+      "ploss": -0.024,
+      "vloss": 0.4326,
+      "entropy": 0.683
+    },
+    {
+      "step": 159744,
+      "ploss": -0.022,
+      "vloss": 0.4243,
+      "entropy": 0.676
+    },
+    {
+      "step": 161792,
+      "ploss": -0.0195,
+      "vloss": 0.3721,
+      "entropy": 0.663
+    },
+    {
+      "step": 163840,
+      "ploss": -0.0232,
+      "vloss": 0.4493,
+      "entropy": 0.629
+    },
+    {
+      "step": 165888,
+      "ploss": -0.0168,
+      "vloss": 0.4584,
+      "entropy": 0.619
+    },
+    {
+      "step": 167936,
+      "ploss": -0.0228,
+      "vloss": 0.4479,
+      "entropy": 0.649
+    },
+    {
+      "step": 169984,
+      "ploss": -0.0211,
+      "vloss": 0.4718,
+      "entropy": 0.632
+    },
+    {
+      "step": 172032,
+      "ploss": -0.0199,
+      "vloss": 0.5603,
+      "entropy": 0.627
+    },
+    {
+      "step": 174080,
+      "ploss": -0.0139,
+      "vloss": 0.4617,
+      "entropy": 0.627
+    },
+    {
+      "step": 176128,
+      "ploss": -0.0156,
+      "vloss": 0.3625,
+      "entropy": 0.593
+    },
+    {
+      "step": 178176,
+      "ploss": -0.0237,
+      "vloss": 0.404,
+      "entropy": 0.605
+    },
+    {
+      "step": 180224,
+      "ploss": -0.016,
+      "vloss": 0.4282,
+      "entropy": 0.564
+    },
+    {
+      "step": 182272,
+      "ploss": -0.0179,
+      "vloss": 0.383,
+      "entropy": 0.595
+    },
+    {
+      "step": 184320,
+      "ploss": -0.0182,
+      "vloss": 0.4679,
+      "entropy": 0.575
+    },
+    {
+      "step": 186368,
+      "ploss": -0.0171,
+      "vloss": 0.4823,
+      "entropy": 0.582
+    },
+    {
+      "step": 188416,
+      "ploss": -0.0085,
+      "vloss": 0.4486,
+      "entropy": 0.505
+    },
+    {
+      "step": 190464,
+      "ploss": -0.0166,
+      "vloss": 0.4059,
+      "entropy": 0.564
+    },
+    {
+      "step": 192512,
+      "ploss": -0.0156,
+      "vloss": 0.3878,
+      "entropy": 0.531
+    },
+    {
+      "step": 194560,
+      "ploss": -0.0233,
+      "vloss": 0.3807,
+      "entropy": 0.537
+    },
+    {
+      "step": 196608,
+      "ploss": -0.0177,
+      "vloss": 0.3541,
+      "entropy": 0.552
+    },
+    {
+      "step": 198656,
+      "ploss": -0.0158,
+      "vloss": 0.4108,
+      "entropy": 0.539
+    },
+    {
+      "step": 200704,
+      "ploss": -0.0261,
+      "vloss": 0.4325,
+      "entropy": 0.563
+    },
+    {
+      "step": 202752,
+      "ploss": -0.0154,
+      "vloss": 0.3945,
+      "entropy": 0.593
+    },
+    {
+      "step": 204800,
+      "ploss": -0.0212,
+      "vloss": 0.4292,
+      "entropy": 0.6
+    },
+    {
+      "step": 206848,
+      "ploss": -0.0231,
+      "vloss": 0.4208,
+      "entropy": 0.608
+    },
+    {
+      "step": 208896,
+      "ploss": -0.0245,
+      "vloss": 0.4358,
+      "entropy": 0.622
+    },
+    {
+      "step": 210944,
+      "ploss": -0.0253,
+      "vloss": 0.4375,
+      "entropy": 0.624
+    },
+    {
+      "step": 212992,
+      "ploss": -0.0243,
+      "vloss": 0.4032,
+      "entropy": 0.634
+    },
+    {
+      "step": 215040,
+      "ploss": -0.0155,
+      "vloss": 0.3927,
+      "entropy": 0.621
+    },
+    {
+      "step": 217088,
+      "ploss": -0.0247,
+      "vloss": 0.4453,
+      "entropy": 0.665
+    },
+    {
+      "step": 219136,
+      "ploss": -0.0207,
+      "vloss": 0.4636,
+      "entropy": 0.584
+    },
+    {
+      "step": 221184,
+      "ploss": -0.0198,
+      "vloss": 0.4203,
+      "entropy": 0.607
+    },
+    {
+      "step": 223232,
+      "ploss": -0.0206,
+      "vloss": 0.4611,
+      "entropy": 0.548
+    },
+    {
+      "step": 225280,
+      "ploss": -0.0189,
+      "vloss": 0.3404,
+      "entropy": 0.562
+    },
+    {
+      "step": 227328,
+      "ploss": -0.0212,
+      "vloss": 0.4696,
+      "entropy": 0.574
+    },
+    {
+      "step": 229376,
+      "ploss": -0.0202,
+      "vloss": 0.3905,
+      "entropy": 0.578
+    },
+    {
+      "step": 231424,
+      "ploss": -0.0195,
+      "vloss": 0.4494,
+      "entropy": 0.545
+    },
+    {
+      "step": 233472,
+      "ploss": -0.0235,
+      "vloss": 0.3989,
+      "entropy": 0.583
+    },
+    {
+      "step": 235520,
+      "ploss": -0.0174,
+      "vloss": 0.4024,
+      "entropy": 0.554
+    },
+    {
+      "step": 237568,
+      "ploss": -0.0099,
+      "vloss": 0.4522,
+      "entropy": 0.529
+    },
+    {
+      "step": 239616,
+      "ploss": -0.0198,
+      "vloss": 0.3463,
+      "entropy": 0.564
+    },
+    {
+      "step": 241664,
+      "ploss": -0.0258,
+      "vloss": 0.3152,
+      "entropy": 0.581
+    },
+    {
+      "step": 243712,
+      "ploss": -0.0191,
+      "vloss": 0.4287,
+      "entropy": 0.578
+    },
+    {
+      "step": 245760,
+      "ploss": -0.0172,
+      "vloss": 0.4125,
+      "entropy": 0.55
+    },
+    {
+      "step": 247808,
+      "ploss": -0.0232,
+      "vloss": 0.4375,
+      "entropy": 0.573
+    },
+    {
+      "step": 249856,
+      "ploss": -0.0205,
+      "vloss": 0.412,
+      "entropy": 0.537
+    },
+    {
+      "step": 251904,
+      "ploss": -0.0178,
+      "vloss": 0.3242,
+      "entropy": 0.532
+    },
+    {
+      "step": 253952,
+      "ploss": -0.0183,
+      "vloss": 0.3485,
+      "entropy": 0.555
+    },
+    {
+      "step": 256000,
+      "ploss": -0.0211,
+      "vloss": 0.4167,
+      "entropy": 0.555
+    },
+    {
+      "step": 258048,
+      "ploss": -0.0236,
+      "vloss": 0.3703,
+      "entropy": 0.593
+    },
+    {
+      "step": 260096,
+      "ploss": -0.0165,
+      "vloss": 0.3512,
+      "entropy": 0.539
+    },
+    {
+      "step": 262144,
+      "ploss": -0.0164,
+      "vloss": 0.3618,
+      "entropy": 0.547
+    },
+    {
+      "step": 264192,
+      "ploss": -0.0221,
+      "vloss": 0.3633,
+      "entropy": 0.535
+    },
+    {
+      "step": 266240,
+      "ploss": -0.0226,
+      "vloss": 0.4858,
+      "entropy": 0.571
+    },
+    {
+      "step": 268288,
+      "ploss": -0.0199,
+      "vloss": 0.4799,
+      "entropy": 0.54
+    },
+    {
+      "step": 270336,
+      "ploss": -0.0199,
+      "vloss": 0.376,
+      "entropy": 0.549
+    },
+    {
+      "step": 272384,
+      "ploss": -0.0212,
+      "vloss": 0.308,
+      "entropy": 0.552
+    },
+    {
+      "step": 274432,
+      "ploss": -0.0208,
+      "vloss": 0.3582,
+      "entropy": 0.549
+    },
+    {
+      "step": 276480,
+      "ploss": -0.0211,
+      "vloss": 0.2958,
+      "entropy": 0.504
+    },
+    {
+      "step": 278528,
+      "ploss": -0.0146,
+      "vloss": 0.514,
+      "entropy": 0.531
+    },
+    {
+      "step": 280576,
+      "ploss": -0.0218,
+      "vloss": 0.3607,
+      "entropy": 0.526
+    },
+    {
+      "step": 282624,
+      "ploss": -0.0186,
+      "vloss": 0.4351,
+      "entropy": 0.554
+    },
+    {
+      "step": 284672,
+      "ploss": -0.0179,
+      "vloss": 0.3054,
+      "entropy": 0.525
+    },
+    {
+      "step": 286720,
+      "ploss": -0.0246,
+      "vloss": 0.4001,
+      "entropy": 0.536
+    },
+    {
+      "step": 288768,
+      "ploss": -0.0229,
+      "vloss": 0.372,
+      "entropy": 0.535
+    },
+    {
+      "step": 290816,
+      "ploss": -0.0231,
+      "vloss": 0.3967,
+      "entropy": 0.503
+    },
+    {
+      "step": 292864,
+      "ploss": -0.0218,
+      "vloss": 0.356,
+      "entropy": 0.522
+    },
+    {
+      "step": 294912,
+      "ploss": -0.022,
+      "vloss": 0.2872,
+      "entropy": 0.531
+    },
+    {
+      "step": 296960,
+      "ploss": -0.0219,
+      "vloss": 0.4279,
+      "entropy": 0.506
+    },
+    {
+      "step": 299008,
+      "ploss": -0.0235,
+      "vloss": 0.3607,
+      "entropy": 0.493
+    },
+    {
+      "step": 301056,
+      "ploss": -0.0226,
+      "vloss": 0.3193,
+      "entropy": 0.511
+    },
+    {
+      "step": 303104,
+      "ploss": -0.0208,
+      "vloss": 0.3542,
+      "entropy": 0.476
+    },
+    {
+      "step": 305152,
+      "ploss": -0.0234,
+      "vloss": 0.3511,
+      "entropy": 0.461
+    },
+    {
+      "step": 307200,
+      "ploss": -0.0196,
+      "vloss": 0.3897,
+      "entropy": 0.482
+    },
+    {
+      "step": 309248,
+      "ploss": -0.0235,
+      "vloss": 0.3987,
+      "entropy": 0.47
+    },
+    {
+      "step": 311296,
+      "ploss": -0.0194,
+      "vloss": 0.3816,
+      "entropy": 0.463
+    },
+    {
+      "step": 313344,
+      "ploss": -0.0207,
+      "vloss": 0.3624,
+      "entropy": 0.482
+    },
+    {
+      "step": 315392,
+      "ploss": -0.022,
+      "vloss": 0.2857,
+      "entropy": 0.466
+    },
+    {
+      "step": 317440,
+      "ploss": -0.0164,
+      "vloss": 0.3625,
+      "entropy": 0.443
+    },
+    {
+      "step": 319488,
+      "ploss": -0.0198,
+      "vloss": 0.3011,
+      "entropy": 0.453
+    },
+    {
+      "step": 321536,
+      "ploss": -0.0237,
+      "vloss": 0.3509,
+      "entropy": 0.435
+    },
+    {
+      "step": 323584,
+      "ploss": -0.0232,
+      "vloss": 0.3809,
+      "entropy": 0.461
+    },
+    {
+      "step": 325632,
+      "ploss": -0.0189,
+      "vloss": 0.368,
+      "entropy": 0.442
+    },
+    {
+      "step": 327680,
+      "ploss": -0.0192,
+      "vloss": 0.3753,
+      "entropy": 0.454
+    },
+    {
+      "step": 329728,
+      "ploss": -0.0197,
+      "vloss": 0.3533,
+      "entropy": 0.446
+    },
+    {
+      "step": 331776,
+      "ploss": -0.0185,
+      "vloss": 0.3459,
+      "entropy": 0.439
+    },
+    {
+      "step": 333824,
+      "ploss": -0.0157,
+      "vloss": 0.3294,
+      "entropy": 0.456
+    },
+    {
+      "step": 335872,
+      "ploss": -0.0232,
+      "vloss": 0.3569,
+      "entropy": 0.469
+    },
+    {
+      "step": 337920,
+      "ploss": -0.0231,
+      "vloss": 0.2641,
+      "entropy": 0.421
+    },
+    {
+      "step": 339968,
+      "ploss": -0.0216,
+      "vloss": 0.3538,
+      "entropy": 0.448
+    },
+    {
+      "step": 342016,
+      "ploss": -0.0232,
+      "vloss": 0.4304,
+      "entropy": 0.396
+    },
+    {
+      "step": 344064,
+      "ploss": -0.0233,
+      "vloss": 0.3176,
+      "entropy": 0.43
+    },
+    {
+      "step": 346112,
+      "ploss": -0.0196,
+      "vloss": 0.4313,
+      "entropy": 0.413
+    },
+    {
+      "step": 348160,
+      "ploss": -0.018,
+      "vloss": 0.386,
+      "entropy": 0.417
+    },
+    {
+      "step": 350208,
+      "ploss": -0.0181,
+      "vloss": 0.3297,
+      "entropy": 0.386
+    },
+    {
+      "step": 352256,
+      "ploss": -0.0157,
+      "vloss": 0.3154,
+      "entropy": 0.403
+    },
+    {
+      "step": 354304,
+      "ploss": -0.0187,
+      "vloss": 0.3017,
+      "entropy": 0.425
+    },
+    {
+      "step": 356352,
+      "ploss": -0.0215,
+      "vloss": 0.3238,
+      "entropy": 0.433
+    },
+    {
+      "step": 358400,
+      "ploss": -0.0163,
+      "vloss": 0.263,
+      "entropy": 0.426
+    },
+    {
+      "step": 360448,
+      "ploss": -0.0228,
+      "vloss": 0.2799,
+      "entropy": 0.399
+    },
+    {
+      "step": 362496,
+      "ploss": -0.0178,
+      "vloss": 0.2764,
+      "entropy": 0.412
+    },
+    {
+      "step": 364544,
+      "ploss": -0.0194,
+      "vloss": 0.3705,
+      "entropy": 0.409
+    },
+    {
+      "step": 366592,
+      "ploss": -0.0202,
+      "vloss": 0.3254,
+      "entropy": 0.396
+    },
+    {
+      "step": 368640,
+      "ploss": -0.0216,
+      "vloss": 0.4089,
+      "entropy": 0.383
+    },
+    {
+      "step": 370688,
+      "ploss": -0.018,
+      "vloss": 0.2615,
+      "entropy": 0.376
+    },
+    {
+      "step": 372736,
+      "ploss": -0.0197,
+      "vloss": 0.2865,
+      "entropy": 0.385
+    },
+    {
+      "step": 374784,
+      "ploss": -0.0194,
+      "vloss": 0.4198,
+      "entropy": 0.403
+    },
+    {
+      "step": 376832,
+      "ploss": -0.0175,
+      "vloss": 0.4205,
+      "entropy": 0.398
+    },
+    {
+      "step": 378880,
+      "ploss": -0.0183,
+      "vloss": 0.2828,
+      "entropy": 0.398
+    },
+    {
+      "step": 380928,
+      "ploss": -0.0193,
+      "vloss": 0.3476,
+      "entropy": 0.406
+    },
+    {
+      "step": 382976,
+      "ploss": -0.0212,
+      "vloss": 0.3384,
+      "entropy": 0.376
+    },
+    {
+      "step": 385024,
+      "ploss": -0.0175,
+      "vloss": 0.3746,
+      "entropy": 0.403
+    },
+    {
+      "step": 387072,
+      "ploss": -0.0192,
+      "vloss": 0.4125,
+      "entropy": 0.401
+    },
+    {
+      "step": 389120,
+      "ploss": -0.0174,
+      "vloss": 0.3538,
+      "entropy": 0.411
+    },
+    {
+      "step": 391168,
+      "ploss": -0.0189,
+      "vloss": 0.3647,
+      "entropy": 0.384
+    },
+    {
+      "step": 393216,
+      "ploss": -0.0206,
+      "vloss": 0.306,
+      "entropy": 0.392
+    },
+    {
+      "step": 395264,
+      "ploss": -0.0199,
+      "vloss": 0.452,
+      "entropy": 0.388
+    },
+    {
+      "step": 397312,
+      "ploss": -0.021,
+      "vloss": 0.3831,
+      "entropy": 0.398
+    },
+    {
+      "step": 399360,
+      "ploss": -0.0161,
+      "vloss": 0.3313,
+      "entropy": 0.356
+    },
+    {
+      "step": 401408,
+      "ploss": -0.0198,
+      "vloss": 0.3823,
+      "entropy": 0.349
+    },
+    {
+      "step": 403456,
+      "ploss": -0.0204,
+      "vloss": 0.2754,
+      "entropy": 0.332
+    },
+    {
+      "step": 405504,
+      "ploss": -0.0169,
+      "vloss": 0.4033,
+      "entropy": 0.355
+    },
+    {
+      "step": 407552,
+      "ploss": -0.0148,
+      "vloss": 0.3231,
+      "entropy": 0.345
+    },
+    {
+      "step": 409600,
+      "ploss": -0.0174,
+      "vloss": 0.3227,
+      "entropy": 0.334
+    },
+    {
+      "step": 411648,
+      "ploss": -0.0155,
+      "vloss": 0.2326,
+      "entropy": 0.317
+    },
+    {
+      "step": 413696,
+      "ploss": -0.0174,
+      "vloss": 0.3158,
+      "entropy": 0.32
+    },
+    {
+      "step": 415744,
+      "ploss": -0.0187,
+      "vloss": 0.33,
+      "entropy": 0.329
+    },
+    {
+      "step": 417792,
+      "ploss": -0.0141,
+      "vloss": 0.3233,
+      "entropy": 0.313
+    },
+    {
+      "step": 419840,
+      "ploss": -0.0202,
+      "vloss": 0.2887,
+      "entropy": 0.337
+    },
+    {
+      "step": 421888,
+      "ploss": -0.0197,
+      "vloss": 0.3583,
+      "entropy": 0.324
+    },
+    {
+      "step": 423936,
+      "ploss": -0.0177,
+      "vloss": 0.3259,
+      "entropy": 0.294
+    },
+    {
+      "step": 425984,
+      "ploss": -0.0172,
+      "vloss": 0.3544,
+      "entropy": 0.323
+    },
+    {
+      "step": 428032,
+      "ploss": -0.0155,
+      "vloss": 0.273,
+      "entropy": 0.307
+    },
+    {
+      "step": 430080,
+      "ploss": -0.0172,
+      "vloss": 0.2981,
+      "entropy": 0.318
+    },
+    {
+      "step": 432128,
+      "ploss": -0.015,
+      "vloss": 0.2926,
+      "entropy": 0.326
+    },
+    {
+      "step": 434176,
+      "ploss": -0.0166,
+      "vloss": 0.2809,
+      "entropy": 0.317
+    },
+    {
+      "step": 436224,
+      "ploss": -0.0185,
+      "vloss": 0.3023,
+      "entropy": 0.322
+    },
+    {
+      "step": 438272,
+      "ploss": -0.0167,
+      "vloss": 0.3332,
+      "entropy": 0.327
+    },
+    {
+      "step": 440320,
+      "ploss": -0.0163,
+      "vloss": 0.2861,
+      "entropy": 0.301
+    },
+    {
+      "step": 442368,
+      "ploss": -0.0156,
+      "vloss": 0.2994,
+      "entropy": 0.309
+    },
+    {
+      "step": 444416,
+      "ploss": -0.0134,
+      "vloss": 0.2694,
+      "entropy": 0.316
+    },
+    {
+      "step": 446464,
+      "ploss": -0.0168,
+      "vloss": 0.3012,
+      "entropy": 0.309
+    },
+    {
+      "step": 448512,
+      "ploss": -0.0163,
+      "vloss": 0.5304,
+      "entropy": 0.313
+    },
+    {
+      "step": 450560,
+      "ploss": -0.0149,
+      "vloss": 0.2587,
+      "entropy": 0.331
+    },
+    {
+      "step": 452608,
+      "ploss": -0.0167,
+      "vloss": 0.2462,
+      "entropy": 0.308
+    },
+    {
+      "step": 454656,
+      "ploss": -0.0146,
+      "vloss": 0.314,
+      "entropy": 0.299
+    },
+    {
+      "step": 456704,
+      "ploss": -0.0168,
+      "vloss": 0.2656,
+      "entropy": 0.295
+    },
+    {
+      "step": 458752,
+      "ploss": -0.0138,
+      "vloss": 0.3356,
+      "entropy": 0.288
+    },
+    {
+      "step": 460800,
+      "ploss": -0.0151,
+      "vloss": 0.3676,
+      "entropy": 0.31
+    },
+    {
+      "step": 462848,
+      "ploss": -0.0163,
+      "vloss": 0.2777,
+      "entropy": 0.315
+    },
+    {
+      "step": 464896,
+      "ploss": -0.0141,
+      "vloss": 0.3914,
+      "entropy": 0.292
+    },
+    {
+      "step": 466944,
+      "ploss": -0.0159,
+      "vloss": 0.32,
+      "entropy": 0.287
+    },
+    {
+      "step": 468992,
+      "ploss": -0.0138,
+      "vloss": 0.2415,
+      "entropy": 0.314
+    },
+    {
+      "step": 471040,
+      "ploss": -0.016,
+      "vloss": 0.2668,
+      "entropy": 0.291
+    },
+    {
+      "step": 473088,
+      "ploss": -0.0131,
+      "vloss": 0.2898,
+      "entropy": 0.292
+    },
+    {
+      "step": 475136,
+      "ploss": -0.0146,
+      "vloss": 0.3469,
+      "entropy": 0.304
+    },
+    {
+      "step": 477184,
+      "ploss": -0.0171,
+      "vloss": 0.3133,
+      "entropy": 0.287
+    },
+    {
+      "step": 479232,
+      "ploss": -0.0139,
+      "vloss": 0.3325,
+      "entropy": 0.287
+    },
+    {
+      "step": 481280,
+      "ploss": -0.0151,
+      "vloss": 0.3029,
+      "entropy": 0.317
+    },
+    {
+      "step": 483328,
+      "ploss": -0.0165,
+      "vloss": 0.2564,
+      "entropy": 0.281
+    },
+    {
+      "step": 485376,
+      "ploss": -0.0135,
+      "vloss": 0.2983,
+      "entropy": 0.298
+    },
+    {
+      "step": 487424,
+      "ploss": -0.0141,
+      "vloss": 0.2875,
+      "entropy": 0.287
+    },
+    {
+      "step": 489472,
+      "ploss": -0.0123,
+      "vloss": 0.179,
+      "entropy": 0.276
+    },
+    {
+      "step": 491520,
+      "ploss": -0.0127,
+      "vloss": 0.3917,
+      "entropy": 0.293
+    },
+    {
+      "step": 493568,
+      "ploss": -0.0119,
+      "vloss": 0.2762,
+      "entropy": 0.267
+    },
+    {
+      "step": 495616,
+      "ploss": -0.0153,
+      "vloss": 0.2855,
+      "entropy": 0.263
+    },
+    {
+      "step": 497664,
+      "ploss": -0.0134,
+      "vloss": 0.2756,
+      "entropy": 0.273
+    },
+    {
+      "step": 499712,
+      "ploss": -0.0157,
+      "vloss": 0.2455,
+      "entropy": 0.281
+    },
+    {
+      "step": 501760,
+      "ploss": -0.0164,
+      "vloss": 0.338,
+      "entropy": 0.287
     }
   ]
 }
