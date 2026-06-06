@@ -51,8 +51,10 @@ class ConnectFour:
         return np.where(self.board[0] == 0)[0]
 
     def _drop_row(self, col: int) -> int:
-        empties = np.where(self.board[:, col] == 0)[0]
-        return int(empties[-1]) if empties.size else -1
+        for r in range(ROWS - 1, -1, -1):
+            if self.board[r, col] == 0:
+                return r
+        return -1
 
     # --- transition ----------------------------------------------------
     def step(self, col: int) -> "ConnectFour":
@@ -165,11 +167,31 @@ class SelfPlayEnv:
     episode for balance.
     """
 
-    def __init__(self, seed: int = 0):
+    def __init__(self, seed: int = 0, tactical_coef: float = 0.0):
         self.game = ConnectFour()
         self.rng = np.random.default_rng(seed)
         self.opponent: Policy | None = None
         self.learner_seat = 1
+        # dense tactical shaping: penalize the two fatal Connect-4 blunders a
+        # terminal-only reward teaches too slowly to a model-free policy —
+        # (a) not taking an available immediate win, and (b) leaving the
+        # opponent an immediate win (a missed block or a self-made threat).
+        # 0.0 disables it (pure +1/-1/0).  Kept << 1 so the game outcome still
+        # dominates; this only sharpens credit assignment onto the blunder ply.
+        self.tactical_coef = float(tactical_coef)
+
+    def _has_immediate_win(self, player: int) -> bool:
+        g = self.game
+        for c in range(COLS):
+            if g.board[0, c] != 0:
+                continue
+            r = g._drop_row(c)
+            g.board[r, c] = player
+            won = g._is_win(r, c, player)
+            g.board[r, c] = 0
+            if won:
+                return True
+        return False
 
     def reset(self, opponent: Policy, learner_seat: int | None = None):
         self.opponent = opponent
@@ -206,11 +228,20 @@ class SelfPlayEnv:
     # gym-like API ------------------------------------------------------
     def step(self, action: int):
         g = self.game
+        # tactical context BEFORE the learner moves (it is the learner's turn)
+        had_win = self.tactical_coef and self._has_immediate_win(self.learner_seat)
         g.step(int(action))
-        if g.done:
+        if g.done:                                   # learner's move ended it
             return self._terminal({})
+        shaped = 0.0
+        if self.tactical_coef:
+            if had_win:                              # had a win, didn't take it
+                shaped -= self.tactical_coef
+            if self._has_immediate_win(g.player):    # left opponent an immediate win
+                shaped -= self.tactical_coef
         self._opponent_move()
         if g.done:
-            return self._terminal({})
+            obs, r, done, info = self._terminal({})
+            return obs, r + shaped, done, info
         obs, mask = self._obs()
-        return (obs, mask), 0.0, False, {}
+        return (obs, mask), shaped, False, {}

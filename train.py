@@ -56,7 +56,8 @@ def main():
     ap.add_argument("--steps", type=int, default=300_000)
     ap.add_argument("--eval-every", type=int, default=10_000)
     ap.add_argument("--eval-games", type=int, default=200)
-    ap.add_argument("--negamax-depth", type=int, default=3)
+    ap.add_argument("--negamax-depth", type=int, default=4,
+                    help="eval Kaggle-style negamax depth")
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
 

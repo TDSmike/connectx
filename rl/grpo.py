@@ -27,7 +27,7 @@ import torch
 import torch.nn as nn
 
 from .env import SelfPlayEnv
-from .negamax import NegamaxPolicy
+from .negamax import KaggleNegamaxPolicy
 from .networks import PolicyNetwork, masked_categorical
 from .policies import NetPolicy
 from .pool import OpponentPool, opponent_weights
@@ -39,23 +39,38 @@ class GRPOConfig:
     cosine_lr: bool = True          # cosine-decay lr over training progress
     lr_min_ratio: float = 0.1       # final lr = lr * lr_min_ratio
     clip: float = 0.2
-    entropy_coef: float = 0.01
+    entropy_coef: float = 0.02          # start value; annealed to entropy_coef_end
+    entropy_coef_end: float = 0.01
     group_size: int = 8           # G trajectories per group
     groups_per_iter: int = 48     # groups collected before each update
     epochs: int = 2
     minibatch: int = 512
     max_grad_norm: float = 0.5
     adv_eps: float = 1e-4
-    # network: small residual backbone (~0.5M params)
+    # faster-win / slower-loss shaping added to the terminal return: gives an
+    # all-win or all-loss group non-zero variance, so its group-relative
+    # advantage isn't identically 0 (GRPO's failure mode vs strong opponents).
+    shaping_coef: float = 0.25
+    # dense tactical reward shaping (see SelfPlayEnv): penalize missed wins /
+    # allowed opponent wins so the policy becomes tactically sound enough to
+    # beat a perfect-horizon negamax without any inference-time search.  These
+    # per-step penalties also give same-outcome groups extra within-group
+    # variance, complementing the length shaping above.
+    tactical_coef: float = 0.3
+    # network: deeper residual backbone for sharper tactical patterns
     channels: int = 64
-    hidden: int = 128
-    res_blocks: int = 3
+    hidden: int = 192
+    res_blocks: int = 5
     # self-play opponent curriculum: a 3-way (random / negamax / self) mixture
     # whose weights shift with training progress (random-dominant early,
     # negamax-dominant mid, self-dominant late) while all three always coexist.
     negamax_peak: float = 0.5      # progress at which the negamax share peaks
     opp_floor: float = 0.1         # min (unnormalized) weight per opponent
-    negamax_depth: int = 3
+    # Train against the actual Kaggle built-in negamax clone. Multiple seeds
+    # matter because Kaggle breaks equal-score ties randomly; a single fixed
+    # seed lets a greedy policy memorize a narrow set of lines.
+    negamax_depth: int = 4
+    negamax_seeds: tuple = tuple(range(16))
     snapshot_every: int = 20_000
     device: str = "cuda"
     seed: int = 0
@@ -69,10 +84,13 @@ class GRPOAgent:
         self.device = torch.device(c.device if torch.cuda.is_available() else "cpu")
         self.net = PolicyNetwork(c.channels, c.hidden, c.res_blocks).to(self.device)
         self.opt = torch.optim.Adam(self.net.parameters(), lr=c.lr, eps=1e-5)
-        self.env = SelfPlayEnv(seed=c.seed)
+        self.env = SelfPlayEnv(seed=c.seed, tactical_coef=c.tactical_coef)
         self.pool = OpponentPool(
             seed=c.seed,
-            fixed=[NegamaxPolicy(depth=c.negamax_depth, seed=c.seed)],
+            fixed=[
+                KaggleNegamaxPolicy(depth=c.negamax_depth, seed=c.seed * 1000 + s)
+                for s in c.negamax_seeds
+            ],
         )
         self.rng = np.random.default_rng(c.seed)
         self.steps = 0
@@ -94,6 +112,10 @@ class GRPOAgent:
         for g in self.opt.param_groups:
             g["lr"] = c.lr * factor
 
+    def _cur_entropy_coef(self) -> float:
+        c = self.cfg
+        return c.entropy_coef + (c.entropy_coef_end - c.entropy_coef) * self._progress()
+
     # policies ----------------------------------------------------------
     def greedy_policy(self):
         return NetPolicy(self.net, device=self.device, deterministic=True)
@@ -104,18 +126,27 @@ class GRPOAgent:
     # rollout -----------------------------------------------------------
     @torch.no_grad()
     def _play_game(self, opponent, seat):
-        """Play one full self-play game; return (steps, terminal_return)."""
+        """Play one full self-play game.
+
+        Returns (steps, shaped_return, won) where shaped_return is the *sum* of
+        per-step rewards (terminal +1/-1/0 plus any tactical shaping) and `won`
+        is the true game outcome (for the logged win rate).
+        """
         dev = self.device
         obs, mask = self.env.reset(opponent, learner_seat=seat)
         steps, done, R = [], False, 0.0
+        won = False
         while not done:
             x = torch.as_tensor(obs, dtype=torch.float32, device=dev).unsqueeze(0)
             m = torch.as_tensor(mask, dtype=torch.bool, device=dev).unsqueeze(0)
             dist = masked_categorical(self.net(x), m)
             a = dist.sample()
             steps.append((obs, mask, int(a.item()), float(dist.log_prob(a).item())))
-            (obs, mask), R, done, _ = self.env.step(int(a.item()))
-        return steps, R
+            (obs, mask), r, done, info = self.env.step(int(a.item()))
+            R += r
+            if done:
+                won = info.get("winner") == seat
+        return steps, R, won
 
     @torch.no_grad()
     def _collect(self):
@@ -126,11 +157,17 @@ class GRPOAgent:
             opp = self.pool.sample_mixed(*self._opp_weights())
             seat = int(self.rng.integers(1, 3))
             group = [self._play_game(opp, seat) for _ in range(c.group_size)]
-            returns = np.array([R for _, R in group], dtype=np.float32)
+            outcomes = np.array([R for _, R, _ in group], dtype=np.float32)
+            lengths = np.array([len(s) for s, _, _ in group], dtype=np.float32)
+            # denser return: faster wins / slower losses (shaping << the +/-1
+            # outcome gap, so mixed groups still ranked by outcome, but all-win
+            # or all-loss groups gain the variance GRPO needs for a gradient).
+            sign = np.where(outcomes > 0, -1.0, 1.0)
+            shaped = outcomes + c.shaping_coef * sign * (lengths / 42.0)
             # group-relative advantage (the defining GRPO step)
-            adv = (returns - returns.mean()) / (returns.std() + c.adv_eps)
-            for (steps, R), a_i in zip(group, adv):
-                wins += int(R == 1.0)
+            adv = (shaped - shaped.mean()) / (shaped.std() + c.adv_eps)
+            for (steps, _, won), a_i in zip(group, adv):
+                wins += int(won)
                 games += 1
                 self.steps += len(steps)
                 for obs, mask, act, logp in steps:
@@ -156,6 +193,7 @@ class GRPOAgent:
         adv = torch.as_tensor(roll["adv"], device=dev)
         n = obs.shape[0]
         idx = np.arange(n)
+        ent_coef = self._cur_entropy_coef()
         stats = {"policy_loss": 0.0, "entropy": 0.0, "nb": 0}
         for _ in range(c.epochs):
             self.rng.shuffle(idx)
@@ -167,7 +205,7 @@ class GRPOAgent:
                 pg = torch.max(-a * ratio,
                                -a * torch.clamp(ratio, 1 - c.clip, 1 + c.clip)).mean()
                 entropy = dist.entropy().mean()
-                loss = pg - c.entropy_coef * entropy
+                loss = pg - ent_coef * entropy
                 self.opt.zero_grad()
                 loss.backward()
                 nn.utils.clip_grad_norm_(self.net.parameters(), c.max_grad_norm)
@@ -206,7 +244,8 @@ class GRPOAgent:
                 sps = self.steps / max(1e-9, time.time() - t0)
                 print(f"[grpo] step {self.steps:>7}/{total_steps} | "
                       f"vs random {metrics['random_win']:.2f} "
-                      f"vs negamax {metrics['negamax_win']:.2f} | "
+                      f"vs negamax {metrics['negamax_win']:.2f} "
+                      f"(p1 {metrics['negamax_p1']:.2f}/p2 {metrics['negamax_p2']:.2f}) | "
                       f"ploss {metrics['ploss']:+.3f} ent {metrics['entropy']:.2f} | "
                       f"train_wr {train_wr:.2f} | mix r/n/s {mix[0]:.2f}/{mix[1]:.2f}/{mix[2]:.2f} "
                       f"lr {lr_now:.1e} | {sps:.0f} st/s", flush=True)
@@ -220,5 +259,9 @@ class GRPOAgent:
     def load(self, path: str):
         d = torch.load(path, map_location=self.device, weights_only=False)
         self.cfg = d["cfg"]
+        c = self.cfg
+        # rebuild the net from the *checkpoint's* config so loading is robust to
+        # changes in the current default architecture.
+        self.net = PolicyNetwork(c.channels, c.hidden, c.res_blocks).to(self.device)
         self.net.load_state_dict(d["net"])
         return self

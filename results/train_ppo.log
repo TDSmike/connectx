@@ -1,0 +1,17 @@
+[ppo seed=0] training 300000 steps on cuda ...
+[ppo ] step   20480/300000 | vs random 0.93 vs negamax 0.00 (p1 0.00/p2 0.00) | ploss -0.015 vloss 0.631 ent 1.30 | mix r/n/s 0.72/0.16/0.12 lr 3.0e-04 | 307 st/s
+[ppo ] step   40960/300000 | vs random 0.95 vs negamax 0.08 (p1 0.14/p2 0.02) | ploss -0.014 vloss 0.590 ent 0.92 | mix r/n/s 0.61/0.24/0.15 lr 2.9e-04 | 252 st/s
+[ppo ] step   61440/300000 | vs random 0.98 vs negamax 0.08 (p1 0.12/p2 0.04) | ploss -0.022 vloss 0.441 ent 0.98 | mix r/n/s 0.52/0.30/0.18 lr 2.7e-04 | 228 st/s
+[ppo ] step   81920/300000 | vs random 0.95 vs negamax 0.18 (p1 0.22/p2 0.14) | ploss -0.019 vloss 0.493 ent 0.96 | mix r/n/s 0.45/0.35/0.20 lr 2.5e-04 | 201 st/s
+[ppo ] step  100352/300000 | vs random 0.97 vs negamax 0.20 (p1 0.30/p2 0.10) | ploss -0.021 vloss 0.547 ent 0.90 | mix r/n/s 0.39/0.39/0.22 lr 2.3e-04 | 183 st/s
+[ppo ] step  120832/300000 | vs random 0.96 vs negamax 0.45 (p1 0.48/p2 0.42) | ploss -0.025 vloss 0.509 ent 0.84 | mix r/n/s 0.33/0.43/0.24 lr 2.1e-04 | 171 st/s
+[ppo ] step  141312/300000 | vs random 0.96 vs negamax 0.55 (p1 0.64/p2 0.46) | ploss -0.024 vloss 0.478 ent 0.91 | mix r/n/s 0.28/0.46/0.25 lr 1.8e-04 | 163 st/s
+[ppo ] step  161792/300000 | vs random 0.97 vs negamax 0.48 (p1 0.54/p2 0.42) | ploss -0.028 vloss 0.544 ent 0.85 | mix r/n/s 0.24/0.48/0.28 lr 1.5e-04 | 155 st/s
+[ppo ] step  180224/300000 | vs random 0.96 vs negamax 0.72 (p1 0.86/p2 0.58) | ploss -0.027 vloss 0.529 ent 0.73 | mix r/n/s 0.22/0.48/0.30 lr 1.2e-04 | 152 st/s
+[ppo ] step  200704/300000 | vs random 0.98 vs negamax 0.82 (p1 0.82/p2 0.82) | ploss -0.028 vloss 0.494 ent 0.56 | mix r/n/s 0.19/0.48/0.33 lr 9.7e-05 | 150 st/s
+[ppo ] step  221184/300000 | vs random 0.97 vs negamax 0.81 (p1 0.90/p2 0.72) | ploss -0.024 vloss 0.432 ent 0.48 | mix r/n/s 0.16/0.48/0.36 lr 7.3e-05 | 150 st/s
+[ppo ] step  241664/300000 | vs random 0.99 vs negamax 0.83 (p1 0.86/p2 0.80) | ploss -0.022 vloss 0.444 ent 0.43 | mix r/n/s 0.13/0.48/0.39 lr 5.4e-05 | 151 st/s
+[ppo ] step  260096/300000 | vs random 1.00 vs negamax 0.86 (p1 0.84/p2 0.88) | ploss -0.021 vloss 0.379 ent 0.45 | mix r/n/s 0.10/0.48/0.42 lr 4.2e-05 | 152 st/s
+[ppo ] step  280576/300000 | vs random 1.00 vs negamax 0.85 (p1 0.92/p2 0.78) | ploss -0.018 vloss 0.380 ent 0.37 | mix r/n/s 0.07/0.48/0.45 lr 3.3e-05 | 154 st/s
+[ppo ] step  301056/300000 | vs random 0.98 vs negamax 0.91 (p1 0.98/p2 0.84) | ploss -0.019 vloss 0.397 ent 0.38 | mix r/n/s 0.04/0.48/0.48 lr 3.0e-05 | 157 st/s
+[ppo seed=0] done in 1922s | final {'random_win': 0.98, 'random_score': 0.96, 'random_p1': 0.98, 'random_p2': 0.98, 'negamax_win': 0.91, 'negamax_score': 0.84, 'negamax_p1': 0.98, 'negamax_p2': 0.84, 'step': 301056, 'pool': 15, 'ploss': -0.019, 'vloss': 0.3965, 'entropy': 0.38, 'lr': 2.9999999999999997e-05, 'opp_mix': (0.04, 0.48, 0.48)}

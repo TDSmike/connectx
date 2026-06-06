@@ -9,8 +9,8 @@ Both methods share everything except how the advantage is estimated:
 |----------------------|------------------------------------------------------------|
 | state representation | 3-channel canonical board `(own / opponent / empty)`       |
 | action masking       | illegal (full) columns masked to `-inf` in the policy      |
-| network backbone     | 3× conv (64ch) + FC(128)                                   |
-| self-play            | opponent sampled from a snapshot pool (+ random floor)     |
+| network backbone     | residual conv trunk (64ch) + FC                            |
+| self-play            | opponent sampled from snapshots + random + Kaggle negamax  |
 | objective            | PPO-style clipped surrogate + entropy bonus                |
 
 | method | advantage estimate                                        | critic |
@@ -27,7 +27,7 @@ course/
 │   ├── networks.py   # ConvBackbone, ActorCritic (PPO), PolicyNetwork (GRPO)
 │   ├── policies.py   # NetPolicy: wrap a net as a Policy (eval / pool opponent)
 │   ├── pool.py       # self-play opponent snapshot pool
-│   ├── negamax.py    # fast alpha-beta opponent (benchmark for curves)
+│   ├── negamax.py    # alpha-beta opponent + Kaggle negamax clone
 │   ├── ppo.py        # PPOAgent  (actor-critic + GAE)
 │   ├── grpo.py       # GRPOAgent (critic-free, group-relative advantage)
 │   ├── evaluate.py   # internal + Kaggle-faithful evaluation
@@ -39,11 +39,12 @@ course/
 
 ## Usage
 
-This box has 8 GPUs; pick a free one with `CUDA_VISIBLE_DEVICES`.
-
 ```bash
-# train both methods (writes checkpoints/*.pt and results/*.json)
-CUDA_VISIBLE_DEVICES=6 python train.py --exp all --steps 300000
+# train PPO and GRPO, then generate plots and Kaggle comparisons
+bash run.sh
+
+# override defaults when needed
+STEPS=500000 EVAL_GAMES=200 bash run.sh
 
 # or one at a time
 CUDA_VISIBLE_DEVICES=6 python train.py --exp ppo  --steps 300000
@@ -54,5 +55,5 @@ CUDA_VISIBLE_DEVICES=6 python compare.py --kaggle
 ```
 
 Reward convention: +1 win / −1 loss / 0 draw, from the learner's perspective.
-Training metric curves log win rate vs `random` and vs a depth-3 `negamax`
-benchmark every `--eval-every` self-play steps.
+Training metric curves log win rate vs `random` and vs a depth-4 Kaggle-style
+`negamax` benchmark every `--eval-every` self-play steps.

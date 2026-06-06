@@ -24,7 +24,7 @@ import torch
 import torch.nn as nn
 
 from .env import SelfPlayEnv, N_ACTIONS, OBS_SHAPE
-from .negamax import NegamaxPolicy
+from .negamax import KaggleNegamaxPolicy
 from .networks import ActorCritic, masked_categorical
 from .policies import NetPolicy
 from .pool import OpponentPool, opponent_weights
@@ -38,23 +38,32 @@ class PPOConfig:
     gamma: float = 0.99
     gae_lambda: float = 0.95
     clip: float = 0.2
-    entropy_coef: float = 0.01
+    entropy_coef: float = 0.02          # start value; annealed to entropy_coef_end
+    entropy_coef_end: float = 0.01
     value_coef: float = 0.5
     epochs: int = 4
     minibatch: int = 256
     rollout_steps: int = 2_048
     max_grad_norm: float = 0.5
     norm_adv: bool = True
-    # network: small residual backbone (~0.5M params)
+    # dense tactical reward shaping (see SelfPlayEnv): penalize missed wins /
+    # allowed opponent wins so the policy becomes tactically sound enough to
+    # beat a perfect-horizon negamax without any inference-time search.
+    tactical_coef: float = 0.3
+    # network: deeper residual backbone for sharper tactical patterns
     channels: int = 64
-    hidden: int = 128
-    res_blocks: int = 3
+    hidden: int = 192
+    res_blocks: int = 5
     # self-play opponent curriculum: a 3-way (random / negamax / self) mixture
     # whose weights shift with training progress (random-dominant early,
     # negamax-dominant mid, self-dominant late) while all three always coexist.
     negamax_peak: float = 0.5      # progress at which the negamax share peaks
     opp_floor: float = 0.1         # min (unnormalized) weight per opponent
-    negamax_depth: int = 3
+    # Train against the actual Kaggle built-in negamax clone. Multiple seeds
+    # matter because Kaggle breaks equal-score ties randomly; a single fixed
+    # seed lets a greedy policy memorize a narrow set of lines.
+    negamax_depth: int = 4
+    negamax_seeds: tuple = tuple(range(16))
     snapshot_every: int = 20_000
     device: str = "cuda"
     seed: int = 0
@@ -68,10 +77,13 @@ class PPOAgent:
         self.device = torch.device(c.device if torch.cuda.is_available() else "cpu")
         self.net = ActorCritic(c.channels, c.hidden, c.res_blocks).to(self.device)
         self.opt = torch.optim.Adam(self.net.parameters(), lr=c.lr, eps=1e-5)
-        self.env = SelfPlayEnv(seed=c.seed)
+        self.env = SelfPlayEnv(seed=c.seed, tactical_coef=c.tactical_coef)
         self.pool = OpponentPool(
             seed=c.seed,
-            fixed=[NegamaxPolicy(depth=c.negamax_depth, seed=c.seed)],
+            fixed=[
+                KaggleNegamaxPolicy(depth=c.negamax_depth, seed=c.seed * 1000 + s)
+                for s in c.negamax_seeds
+            ],
         )
         self.rng = np.random.default_rng(c.seed)
         self.steps = 0
@@ -94,6 +106,10 @@ class PPOAgent:
         factor = c.lr_min_ratio + (1 - c.lr_min_ratio) * 0.5 * (1 + math.cos(math.pi * self._progress()))
         for g in self.opt.param_groups:
             g["lr"] = c.lr * factor
+
+    def _cur_entropy_coef(self) -> float:
+        c = self.cfg
+        return c.entropy_coef + (c.entropy_coef_end - c.entropy_coef) * self._progress()
 
     # policies ----------------------------------------------------------
     def greedy_policy(self):
@@ -176,6 +192,7 @@ class PPOAgent:
 
         n = obs.shape[0]
         idx = np.arange(n)
+        ent_coef = self._cur_entropy_coef()
         stats = {"policy_loss": 0.0, "value_loss": 0.0, "entropy": 0.0, "nb": 0}
         for _ in range(c.epochs):
             self.rng.shuffle(idx)
@@ -193,7 +210,7 @@ class PPOAgent:
                 pg2 = -a * torch.clamp(ratio, 1 - c.clip, 1 + c.clip)
                 policy_loss = torch.max(pg1, pg2).mean()
                 value_loss = nn.functional.mse_loss(value, ret[b])
-                loss = policy_loss + c.value_coef * value_loss - c.entropy_coef * entropy
+                loss = policy_loss + c.value_coef * value_loss - ent_coef * entropy
                 self.opt.zero_grad()
                 loss.backward()
                 nn.utils.clip_grad_norm_(self.net.parameters(), c.max_grad_norm)
@@ -233,7 +250,8 @@ class PPOAgent:
                 sps = self.steps / max(1e-9, time.time() - t0)
                 print(f"[ppo ] step {self.steps:>7}/{total_steps} | "
                       f"vs random {metrics['random_win']:.2f} "
-                      f"vs negamax {metrics['negamax_win']:.2f} | "
+                      f"vs negamax {metrics['negamax_win']:.2f} "
+                      f"(p1 {metrics['negamax_p1']:.2f}/p2 {metrics['negamax_p2']:.2f}) | "
                       f"ploss {metrics['ploss']:+.3f} vloss {metrics['vloss']:.3f} "
                       f"ent {metrics['entropy']:.2f} | mix r/n/s {mix[0]:.2f}/{mix[1]:.2f}/{mix[2]:.2f} "
                       f"lr {lr_now:.1e} | {sps:.0f} st/s", flush=True)
@@ -247,5 +265,9 @@ class PPOAgent:
     def load(self, path: str):
         d = torch.load(path, map_location=self.device, weights_only=False)
         self.cfg = d["cfg"]
+        c = self.cfg
+        # rebuild the net from the *checkpoint's* config so loading is robust to
+        # changes in the current default architecture.
+        self.net = ActorCritic(c.channels, c.hidden, c.res_blocks).to(self.device)
         self.net.load_state_dict(d["net"])
         return self

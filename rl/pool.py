@@ -17,20 +17,23 @@ def opponent_weights(progress: float, negamax_peak: float = 0.5,
                      floor: float = 0.1):
     """Curriculum weights (random, negamax, snapshot) over training progress.
 
-    random fades out (1-p), negamax is a triangle peaking at `negamax_peak`,
-    snapshot/self ramps up (p).  A `floor` is added to each so all three
-    opponents always coexist; the caller normalizes.  Result: early play is
-    random-dominated, mid-training negamax-dominated, late self-dominated.
+    random fades out (1-p); negamax ramps up to full weight by `negamax_peak`
+    and then *holds* there; snapshot/self ramps up (p).  A `floor` keeps all
+    three coexisting; the caller normalizes.
+
+    The hold (rather than a triangle that decays back down) is deliberate: with
+    a decaying-negamax schedule the agent ends training playing ~85% itself and
+    only ~8% negamax, so it overfits to beating its own snapshots and never
+    masters the tactics a perfect-horizon negamax punishes.  Holding negamax at
+    full weight keeps strong-opponent pressure on through the *late* phase, when
+    the policy is finally good enough to learn from it (≈48% negamax / 48% self
+    at the end instead of 8% / 85%).
     """
     p = min(1.0, max(0.0, progress))
     if negamax_peak <= 0:
-        neg = 1.0 - p
-    elif negamax_peak >= 1:
-        neg = p
-    elif p <= negamax_peak:
-        neg = p / negamax_peak
+        neg = 1.0
     else:
-        neg = (1.0 - p) / (1.0 - negamax_peak)
+        neg = min(1.0, p / negamax_peak)
     return (1.0 - p) + floor, neg + floor, p + floor
 
 

@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
 from rl.configs import build_agent, EXPERIMENTS
 from rl.evaluate import match, evaluate_vs_kaggle
 from rl.env import RandomPolicy
-from rl.negamax import NegamaxPolicy
+from rl.negamax import KaggleNegamaxPolicy
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CKPT, RES = os.path.join(HERE, "checkpoints"), os.path.join(HERE, "results")
@@ -110,7 +110,7 @@ def main():
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--games", type=int, default=400)
     ap.add_argument("--kaggle", action="store_true")
-    ap.add_argument("--kaggle-episodes", type=int, default=40)
+    ap.add_argument("--kaggle-episodes", type=int, default=100)
     args = ap.parse_args()
 
     curves = {e: load_curve(e, args.seed) for e in EXPERIMENTS}
@@ -125,16 +125,17 @@ def main():
         print("missing checkpoints; train both PPO and GRPO first.")
         return
 
-    print("\n=== Final win rates (internal engine) ===")
-    rnd, neg = RandomPolicy(seed=123), NegamaxPolicy(depth=4, seed=7)
-    header = f"{'method':6s} | {'vs random':>20s} | {'vs negamax(d4)':>20s}"
+    print("\n=== Final win rates (internal engine, Kaggle-style depth-4 negamax) ===")
+    rnd, neg = RandomPolicy(seed=123), KaggleNegamaxPolicy(depth=4, seed=7)
+    header = (f"{'method':6s} | {'vs random':>12s} | "
+              f"{'vs negamax(d4)  [P1 / P2]':>30s}")
     print(header)
     print("-" * len(header))
     for e in EXPERIMENTS:
         r = match(policies[e], rnd, args.games)
         n = match(policies[e], neg, args.games)
-        print(f"{e.upper():6s} | win {r['win']:.3f} draw {r['draw']:.2f} "
-              f"| win {n['win']:.3f} draw {n['draw']:.2f}")
+        print(f"{e.upper():6s} | win {r['win']:.3f}   "
+              f"| win {n['win']:.3f}   [{n['p1_win']:.2f} / {n['p2_win']:.2f}]")
 
     print("\n=== Head-to-head: PPO vs GRPO ===")
     h = match(policies["ppo"], policies["grpo"], args.games)
